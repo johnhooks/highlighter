@@ -1,0 +1,49 @@
+name: Build application
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: "16"
+
+    - name: Install specific Yarn version
+      shell: bash
+      run: |
+        curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.22.19
+        echo 'export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"' >> $GITHUB_PATH
+
+    - name: Get yarn cache directory path
+      id: yarn-cache-dir-path
+      shell: bash
+      run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+
+    - name: Cache node_modules
+      uses: actions/cache@v3
+      id: yarn-cache
+      with:
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+
+    - name: Install Packages
+      shell: bash
+      run: yarn install --frozen-lockfile
+
+    - name: Build application
+      shell: bash
+      run: yarn build
+
+    - name: Test application
+      shell: bash
+      run: yarn test
+
+    - name: Lint application
+      shell: bash
+      run: yarn lint
+
+    - name: Type check application
+      shell: bash
+      run: yarn run check

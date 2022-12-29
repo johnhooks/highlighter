@@ -1,0 +1,22 @@
+name: Run build pipeline
+
+on:
+  push:
+    -branches:
+      - "**"
+  pull_request:
+  workflow_dispatch:
+
+env:
+  # Used by scripts/build-types.sh
+  CI: true
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build application
+        uses: ./.github/actions/build
