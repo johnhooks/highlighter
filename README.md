@@ -112,6 +112,21 @@ Place a numeric range inside `{}`.
 ```
 ````
 
+Add this css to your project highlight lines.
+
+```css
+code > span[data-highlight]:after {
+  background-color: #fff;
+  content: " ";
+  left: 0;
+  opacity: 0.1;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: max-content;
+}
+```
+
 ## Notes
 
 If languages are known ahead of time, limiting them should speed up loading the highlighter.

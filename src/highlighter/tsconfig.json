@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.base",
+  "compilerOptions": {
+    "types": ["hast"],
+    "sourceMap": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": false
+  },
+
+  "references": [
+    { "path": "../meta-parser" }
+  ],
+
+  "include": ["**/*"]
+}

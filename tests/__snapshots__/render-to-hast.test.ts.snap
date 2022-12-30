@@ -1,0 +1,3085 @@
+// Vitest Snapshot v1
+
+exports[`renderToHast > should render fixture: fixture.c 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "#include",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&lt;stdio.h&gt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "int",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "main",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "()",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#123;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "printf(",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&quot;Hello World&quot;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ")",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ";",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "return",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "0",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-constant)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ";",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#125;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+          ],
+          "properties": {},
+          "tagName": "code",
+          "type": "element",
+        },
+      ],
+      "properties": {},
+      "tagName": "pre",
+      "type": "element",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`renderToHast > should render fixture: fixture.cpp 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "#include",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&lt;iostream&gt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "int",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "main",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "()",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#123;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  std",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "::",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-punctuation)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "cout ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&lt;&lt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&quot;Hello World&quot;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ";",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "return",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "0",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-constant)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ";",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#125;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+          ],
+          "properties": {},
+          "tagName": "code",
+          "type": "element",
+        },
+      ],
+      "properties": {},
+      "tagName": "pre",
+      "type": "element",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`renderToHast > should render fixture: fixture.css 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ".fixture::after",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " &#123;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "content",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-constant)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ":",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&quot;hello world&quot;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ";",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#125;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+          ],
+          "properties": {},
+          "tagName": "code",
+          "type": "element",
+        },
+      ],
+      "properties": {},
+      "tagName": "pre",
+      "type": "element",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`renderToHast > should render fixture: fixture.html 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&lt;!",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "DOCTYPE",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "html",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&gt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&lt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "html",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&gt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  &lt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "head",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&gt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  &lt;/",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "head",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&gt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  &lt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "body",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&gt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "    &lt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "h1",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&gt;Hello World&lt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "h1",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&gt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  &lt;/",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "body",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&gt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&lt;/",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "html",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&gt;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+          ],
+          "properties": {},
+          "tagName": "code",
+          "type": "element",
+        },
+      ],
+      "properties": {},
+      "tagName": "pre",
+      "type": "element",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`renderToHast > should render fixture: fixture.js 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "function",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "hello",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(value) &#123;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "if",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "typeof",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " value ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "===",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&quot;string&quot;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ") &#123;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "    ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "console",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-constant)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ".log",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#96;Hello ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "$&#123;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "value",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#125;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#96;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ");",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  &#125; ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "else",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " &#123;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "    ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "throw",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "new",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Error",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#96;Can not greet &#39;undefined&#39;!&#96;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ");",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  &#125;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#125;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "hello",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&quot;world!&quot;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ");",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+          ],
+          "properties": {},
+          "tagName": "code",
+          "type": "element",
+        },
+      ],
+      "properties": {},
+      "tagName": "pre",
+      "type": "element",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`renderToHast > should render fixture: fixture.rb 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "puts",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#39;Hello World&#39;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+          ],
+          "properties": {},
+          "tagName": "code",
+          "type": "element",
+        },
+      ],
+      "properties": {},
+      "tagName": "pre",
+      "type": "element",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`renderToHast > should render fixture: fixture.sh 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "file=",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&quot;fixture&quot;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "extensions=(",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&quot;css&quot;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&quot;js&quot;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&quot;sh&quot;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&quot;sh&quot;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ")",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "for",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ext ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "in",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " $&#123;extensions[*]&#125; ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ";",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "do",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "echo",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&quot;$file.$&#123;ext&#125;&quot;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "done",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+          ],
+          "properties": {},
+          "tagName": "code",
+          "type": "element",
+        },
+      ],
+      "properties": {},
+      "tagName": "pre",
+      "type": "element",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`renderToHast > should render fixture: fixture.ts 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "function",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "hello",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(value",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ":",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "string",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-constant)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "|",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "undefined",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-constant)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ") &#123;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "if",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "typeof",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " value ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "===",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&quot;string&quot;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ") &#123;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "    ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "console",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-constant)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ".log",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#96;Hello ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "$&#123;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "value",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#125;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#96;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ");",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  &#125; ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "else",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " &#123;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "    ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "throw",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "new",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-keyword)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " ",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Error",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#96;Can not greet &#39;undefined&#39;!&#96;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ");",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "  &#125;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&#125;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "hello",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-function)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "&quot;world!&quot;",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-token-string-expression)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": ");",
+                    },
+                  ],
+                  "properties": {
+                    "style": "color: var(--shiki-color-text)",
+                  },
+                  "tagName": "span",
+                  "type": "element",
+                },
+              ],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+            {
+              "children": [],
+              "properties": {},
+              "tagName": "span",
+              "type": "element",
+            },
+          ],
+          "properties": {},
+          "tagName": "code",
+          "type": "element",
+        },
+      ],
+      "properties": {},
+      "tagName": "pre",
+      "type": "element",
+    },
+  ],
+  "type": "root",
+}
+`;
