@@ -39,7 +39,7 @@
     "build:umd:cjs": "rollup --config",
     "build": "./scripts/build-pkg.sh",
     "check": "tsc --build ./src && tsc --project ./tests",
-    "generate:docs": "api-documenter markdown -i ./temp -o ./docs",
+    "generate:docs": "./scripts/build-docs.sh",
     "lint": "eslint --ext .js,.ts .",
     "prepare": "husky install",
     "release": "shipjs prepare",

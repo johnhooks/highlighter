@@ -10,19 +10,19 @@ import type { IThemedToken } from "shiki";
 /**
  * @public
  */
-export interface HastRendererOptions {
+export interface IHastRendererOptions {
   langId?: string;
   fg?: string;
   bg?: string;
-  lineOptions?: LineOption[];
-  elements?: Partial<HastOptions>;
+  lineOptions?: ILineOption[];
+  elements?: Partial<IElementsOptions>;
   themeName?: string;
 }
 
 /**
  * @public
  */
-export interface LineOption {
+export interface ILineOption {
   /**
    * 1-based line number.
    */
@@ -33,7 +33,7 @@ export interface LineOption {
 /**
  * @public
  */
-interface ElementProps {
+interface IElementProps {
   children: HChild;
   [key: string]: unknown;
 }
@@ -41,7 +41,7 @@ interface ElementProps {
 /**
  * @public
  */
-interface PreElementProps extends ElementProps {
+interface IPreElementProps extends IElementProps {
   className?: string;
   style?: string;
 }
@@ -49,12 +49,12 @@ interface PreElementProps extends ElementProps {
 /**
  * @public
  */
-type CodeElementProps = ElementProps;
+type ICodeElementProps = IElementProps;
 
 /**
  * @public
  */
-interface LineElementProps extends ElementProps {
+interface ILineElementProps extends IElementProps {
   className?: string;
   lines: IThemedToken[][];
   line: IThemedToken[];
@@ -64,7 +64,7 @@ interface LineElementProps extends ElementProps {
 /**
  * @public
  */
-interface TokenElementProps extends ElementProps {
+interface ITokenElementProps extends IElementProps {
   style: string;
   tokens: IThemedToken[];
   token: IThemedToken;
@@ -76,26 +76,26 @@ interface TokenElementProps extends ElementProps {
  *
  * @public
  */
-export interface HastOptions {
+export interface IElementsOptions {
   /**
    * Override function for `pre` tags.
    */
-  readonly pre: (props: Partial<PreElementProps>) => Element;
+  readonly pre: (props: Partial<IPreElementProps>) => Element;
 
   /**
    * Override function for `code` tags.
    */
-  readonly code: (props: Partial<CodeElementProps>) => Element;
+  readonly code: (props: Partial<ICodeElementProps>) => Element;
 
   /**
    * Override function for code block lines.
    */
-  readonly line: (props: Partial<LineElementProps>) => Element;
+  readonly line: (props: Partial<ILineElementProps>) => Element;
 
   /**
    * Override function for code block tokens.
    */
-  readonly token: (props: Partial<TokenElementProps>) => Element;
+  readonly token: (props: Partial<ITokenElementProps>) => Element;
 }
 
 /**

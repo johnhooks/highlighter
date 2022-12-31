@@ -16,9 +16,9 @@
 
 |  Interface | Description |
 |  --- | --- |
-|  [HastOptions](./highlighter.hastoptions.md) | Options to modify the syntax tree of the hast code block. |
-|  [HastRendererOptions](./highlighter.hastrendereroptions.md) |  |
-|  [LineOption](./highlighter.lineoption.md) |  |
+|  [IElementsOptions](./highlighter.ielementsoptions.md) | Options to modify the syntax tree of the hast code block. |
+|  [IHastRendererOptions](./highlighter.ihastrendereroptions.md) |  |
+|  [ILineOption](./highlighter.ilineoption.md) |  |
 
 ## Type Aliases
 

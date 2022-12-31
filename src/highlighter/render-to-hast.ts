@@ -12,10 +12,10 @@ import { FontStyle } from "shiki";
 
 import type { Metadata } from "../meta-parser/index.js";
 
-import type { HastRendererOptions, LineOption, HastOptions } from "./types.js";
+import type { IHastRendererOptions, ILineOption, IElementsOptions } from "./types.js";
 import { groupBy, escapeHtml } from "./utils.js";
 
-const defaultElements: HastOptions = {
+const defaultElements: IElementsOptions = {
   pre({ style, children }) {
     return h("pre", { style }, children);
   },
@@ -48,13 +48,13 @@ export function renderToHast({
   metadata = {},
 }: {
   tokens: IThemedToken[][];
-  options?: HastRendererOptions;
+  options?: IHastRendererOptions;
   metadata?: Metadata;
 }): Root {
   // If the user supplied custom elements override the defaults.
   options.elements = Object.assign(defaultElements, options.elements || {});
-  const pre = options.elements?.["pre"] as HastOptions["pre"];
-  const code = options.elements?.["code"] as HastOptions["code"];
+  const pre = options.elements?.["pre"] as IElementsOptions["pre"];
+  const code = options.elements?.["code"] as IElementsOptions["code"];
 
   const lineNodes = mapLinesToHast({ lines: tokens, options, metadata });
   const codeNode = code({ children: lineNodes });
@@ -63,7 +63,7 @@ export function renderToHast({
   return h(null, [preNode]);
 }
 
-function getLineClasses(lineOptions: LineOption[]): string[] {
+function getLineClasses(lineOptions: ILineOption[]): string[] {
   const lineClasses = new Set(["line"]);
   for (const lineOption of lineOptions) {
     for (const lineClass of lineOption.classes ?? []) {
@@ -79,11 +79,11 @@ function mapLinesToHast({
   metadata = {},
 }: {
   lines: IThemedToken[][];
-  options?: HastRendererOptions;
+  options?: IHastRendererOptions;
   metadata?: Metadata;
 }): Element[] {
   const optionsByLineNumber = groupBy(options.lineOptions ?? [], (option) => option.line);
-  const line = options.elements?.["line"] as HastOptions["line"];
+  const line = options.elements?.["line"] as IElementsOptions["line"];
 
   return lines.map((tokens, index) => {
     const lineNumber = index + 1;
@@ -112,10 +112,10 @@ function mapTokenToHast({
 {
   token: IThemedToken;
   index: number;
-  options: HastRendererOptions;
+  options: IHastRendererOptions;
   metadata: Metadata;
 }): Element {
-  const token = options.elements?.["token"] as HastOptions["token"];
+  const token = options.elements?.["token"] as IElementsOptions["token"];
 
   const cssDeclarations = [`color: ${shikiToken.color || options.fg}`];
 

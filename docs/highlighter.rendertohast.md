@@ -11,7 +11,7 @@ Render Shiki tokens to hast, Hypertext Abstract Syntax Tree format.
 ```typescript
 export declare function renderToHast({ tokens, options, metadata, }: {
     tokens: IThemedToken[][];
-    options?: HastRendererOptions;
+    options?: IHastRendererOptions;
     metadata?: Metadata;
 }): Root;
 ```
@@ -20,7 +20,7 @@ export declare function renderToHast({ tokens, options, metadata, }: {
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  { tokens, options, metadata, } | { tokens: IThemedToken\[\]\[\]; options?: [HastRendererOptions](./highlighter.hastrendereroptions.md)<!-- -->; metadata?: [Metadata](./highlighter.metadata.md)<!-- -->; } |  |
+|  { tokens, options, metadata, } | { tokens: IThemedToken\[\]\[\]; options?: [IHastRendererOptions](./highlighter.ihastrendereroptions.md)<!-- -->; metadata?: [Metadata](./highlighter.metadata.md)<!-- -->; } |  |
 
 <b>Returns:</b>
 

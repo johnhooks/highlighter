@@ -14,35 +14,35 @@ import type { Root } from 'hast';
 export function createHighlighter(options: HighlighterOptions): Promise<MdvexHighlighter>;
 
 // @public
-export interface HastOptions {
-    // Warning: (ae-forgotten-export) The symbol "CodeElementProps" needs to be exported by the entry point index.d.ts
-    readonly code: (props: Partial<CodeElementProps>) => Element_2;
-    // Warning: (ae-forgotten-export) The symbol "LineElementProps" needs to be exported by the entry point index.d.ts
-    readonly line: (props: Partial<LineElementProps>) => Element_2;
-    // Warning: (ae-forgotten-export) The symbol "PreElementProps" needs to be exported by the entry point index.d.ts
-    readonly pre: (props: Partial<PreElementProps>) => Element_2;
-    // Warning: (ae-forgotten-export) The symbol "TokenElementProps" needs to be exported by the entry point index.d.ts
-    readonly token: (props: Partial<TokenElementProps>) => Element_2;
+export interface IElementsOptions {
+    // Warning: (ae-forgotten-export) The symbol "ICodeElementProps" needs to be exported by the entry point index.d.ts
+    readonly code: (props: Partial<ICodeElementProps>) => Element_2;
+    // Warning: (ae-forgotten-export) The symbol "ILineElementProps" needs to be exported by the entry point index.d.ts
+    readonly line: (props: Partial<ILineElementProps>) => Element_2;
+    // Warning: (ae-forgotten-export) The symbol "IPreElementProps" needs to be exported by the entry point index.d.ts
+    readonly pre: (props: Partial<IPreElementProps>) => Element_2;
+    // Warning: (ae-forgotten-export) The symbol "ITokenElementProps" needs to be exported by the entry point index.d.ts
+    readonly token: (props: Partial<ITokenElementProps>) => Element_2;
 }
 
 // @public (undocumented)
-export interface HastRendererOptions {
+export interface IHastRendererOptions {
     // (undocumented)
     bg?: string;
     // (undocumented)
-    elements?: Partial<HastOptions>;
+    elements?: Partial<IElementsOptions>;
     // (undocumented)
     fg?: string;
     // (undocumented)
     langId?: string;
     // (undocumented)
-    lineOptions?: LineOption[];
+    lineOptions?: ILineOption[];
     // (undocumented)
     themeName?: string;
 }
 
 // @public (undocumented)
-export interface LineOption {
+export interface ILineOption {
     // (undocumented)
     classes?: string[];
     line: number;
@@ -64,7 +64,7 @@ export function parseMetadata(metastring: string | undefined): Metadata;
 // @public
 export function renderToHast({ tokens, options, metadata, }: {
     tokens: IThemedToken[][];
-    options?: HastRendererOptions;
+    options?: IHastRendererOptions;
     metadata?: Metadata;
 }): Root;
 
