@@ -1,16 +1,10 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/api-extractor/v7/api-extractor.schema.json",
   "projectFolder": ".",
-  "mainEntryPointFilePath": "<projectFolder>/lib/index.d.ts",
+  "mainEntryPointFilePath": "<projectFolder>/build/index.d.ts",
   "bundledPackages": [],
   "compiler": {
-    "overrideTsconfig": {
-      "$schema": "http://json.schemastore.org/tsconfig",
-      "extends": "./tsconfig",
-      "compilerOptions": {
-        "paths": {}
-      }
-    }
+    "tsconfigFilePath": "./src/tsconfig.json"
   },
   "apiReport": {
     "enabled": true

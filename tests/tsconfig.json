@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "rootDir": "../",
+    "outDir": "./build",
+
+    "target": "esnext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "strict": false,
+    "noEmit": true,
+
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+  },
+  "include": ["**/*", "../src"],
+  "references": [{ "path": "../src/highlighter" }]
+}

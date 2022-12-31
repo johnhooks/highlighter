@@ -36,9 +36,9 @@ runs:
       shell: bash
       run: yarn build
 
-    # - name: Test application
-    #   shell: bash
-    #   run: yarn test
+    - name: Test application
+      shell: bash
+      run: yarn test
 
     - name: Lint application
       shell: bash

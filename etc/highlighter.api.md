@@ -4,12 +4,69 @@
 
 ```ts
 
+import type { Element as Element_2 } from 'hastscript/lib/core.js';
+import type { HChild } from 'hastscript/lib/core.js';
 import { HighlighterOptions } from 'shiki';
+import type { IThemedToken } from 'shiki';
+import type { Root } from 'hast';
 
-// Warning: (ae-forgotten-export) The symbol "Highlighter" needs to be exported by the entry point index.d.ts
-//
 // @public
-export function createHighlighter(options: HighlighterOptions): Promise<Highlighter>;
+export function createHighlighter(options: HighlighterOptions): Promise<MdvexHighlighter>;
+
+// @public
+export interface HastOptions {
+    // Warning: (ae-forgotten-export) The symbol "CodeElementProps" needs to be exported by the entry point index.d.ts
+    readonly code: (props: Partial<CodeElementProps>) => Element_2;
+    // Warning: (ae-forgotten-export) The symbol "LineElementProps" needs to be exported by the entry point index.d.ts
+    readonly line: (props: Partial<LineElementProps>) => Element_2;
+    // Warning: (ae-forgotten-export) The symbol "PreElementProps" needs to be exported by the entry point index.d.ts
+    readonly pre: (props: Partial<PreElementProps>) => Element_2;
+    // Warning: (ae-forgotten-export) The symbol "TokenElementProps" needs to be exported by the entry point index.d.ts
+    readonly token: (props: Partial<TokenElementProps>) => Element_2;
+}
+
+// @public (undocumented)
+export interface HastRendererOptions {
+    // (undocumented)
+    bg?: string;
+    // (undocumented)
+    elements?: Partial<HastOptions>;
+    // (undocumented)
+    fg?: string;
+    // (undocumented)
+    langId?: string;
+    // (undocumented)
+    lineOptions?: LineOption[];
+    // (undocumented)
+    themeName?: string;
+}
+
+// @public (undocumented)
+export interface LineOption {
+    // (undocumented)
+    classes?: string[];
+    line: number;
+}
+
+// @public
+export type MdvexHighlighter = (code: string, lang: string | undefined, metastring: string | undefined) => string | Promise<string>;
+
+// @public
+export type Metadata = {
+    lineNumbers?: number[];
+    lineNumbersStart?: string | undefined;
+    title?: string | undefined;
+};
+
+// @public
+export function parseMetadata(metastring: string | undefined): Metadata;
+
+// @public
+export function renderToHast({ tokens, options, metadata, }: {
+    tokens: IThemedToken[][];
+    options?: HastRendererOptions;
+    metadata?: Metadata;
+}): Root;
 
 // (No @packageDocumentation comment for this package)
 

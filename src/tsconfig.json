@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.base",
+  "files": ["./index.ts"],
+  "compilerOptions": {
+    "emitDeclarationOnly": false,
+  },
+  "references": [{ "path": "./highlighter" }, { "path": "./meta-parser" }]
+}
