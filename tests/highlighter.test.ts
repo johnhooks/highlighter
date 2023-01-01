@@ -3,10 +3,9 @@ import { vi } from "vitest";
 import { createHighlighter } from "../src/highlighter/highlighter.js";
 
 const bitmachinaHighlighter = await createHighlighter({ theme: "css-variables" });
+const highlighter = vi.fn(bitmachinaHighlighter);
 
 describe("highlighter", () => {
-  const highlighter = vi.fn(bitmachinaHighlighter);
-
   describe("render options", async () => {
     describe("line numbers", async () => {
       beforeEach(async () => {
@@ -53,30 +52,39 @@ describe("highlighter", () => {
     const code = `let line = 1;\nline = 2;\nline = 3;\nline=4\nline=5\nline=6`;
 
     it("should highlight a single line", async () => {
-      const html = await highlighter(code, "js", "js highlight{2}");
-      document.body.innerHTML = html;
-      const lines = document.querySelectorAll("span[data-line-numbers]");
+      const lines = await injectThenQueryLines(code, "js", "js highlight{2}");
       lines.forEach((line, index) => {
         expect(line.getAttribute("data-highlighted")).toBe(index === 1);
       });
     });
 
     it("should highlight a range of lines", async () => {
-      const html = await highlighter(code, "js", "js highlight{2-4}");
-      document.body.innerHTML = html;
-      const lines = document.querySelectorAll("span[data-line-numbers]");
+      const lines = await injectThenQueryLines(code, "js", "js highlight{2-4}");
       lines.forEach((line, index) => {
         expect(line.getAttribute("data-highlighted")).toBe([1, 2, 3].includes(index));
       });
     });
 
     it("should highlight a single line and a range of lines", async () => {
-      const html = await highlighter(code, "js", "js highlight{2-4,6}");
-      document.body.innerHTML = html;
-      const lines = document.querySelectorAll("span[data-line-numbers]");
+      const lines = await injectThenQueryLines(code, "js", "js highlight{2-4,6}");
       lines.forEach((line, index) => {
         expect(line.getAttribute("data-highlighted")).toBe([1, 2, 3, 5].includes(index));
       });
     });
+
+    describe("passing negative ranges", async () => {
+      it("should not throw error and ignore negative range", async () => {
+        const lines = await injectThenQueryLines(code, "js", "js highlight{-4..-1}");
+        lines.forEach((line) => {
+          expect(line.getAttribute("data-highlighted")).toBe(false);
+        });
+      });
+    });
   });
 });
+
+async function injectThenQueryLines(code: string, lang: string, metadata: string) {
+  const html = await highlighter(code, lang, metadata);
+  document.body.innerHTML = html;
+  return document.querySelectorAll("span[data-line-numbers]");
+}
