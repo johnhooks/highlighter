@@ -4,6 +4,8 @@
 
 ## IHastRendererOptions.bg property
 
+Optional background color of `code` elements.
+
 <b>Signature:</b>
 
 ```typescript

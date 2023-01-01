@@ -1,4 +1,4 @@
-import { parseMetadata } from "../src/meta-parser/index.js";
+import { parseMetadata } from "../src/parse-metadata/index.js";
 
 describe("parseMetadata", () => {
   describe("code fence", () => {

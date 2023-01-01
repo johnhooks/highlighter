@@ -4,6 +4,8 @@
 
 ## IHastRendererOptions.themeName property
 
+Shiki theme name.
+
 <b>Signature:</b>
 
 ```typescript

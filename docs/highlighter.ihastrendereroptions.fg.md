@@ -4,6 +4,8 @@
 
 ## IHastRendererOptions.fg property
 
+Optional foreground color for `code` elements that do not have a grammar.
+
 <b>Signature:</b>
 
 ```typescript

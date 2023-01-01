@@ -10,8 +10,9 @@ Markdown Code Block Metadata
 
 ```typescript
 export type Metadata = {
-    lineNumbers?: number[];
-    lineNumbersStart?: string | undefined;
+    lineNumbers: number[];
+    lineNumbersStart: number;
     title?: string | undefined;
+    lang?: string | undefined;
 };
 ```

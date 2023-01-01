@@ -4,9 +4,11 @@
 
 ```ts
 
-import type { Element as Element_2 } from 'hastscript/lib/core.js';
 import type { HChild } from 'hastscript/lib/core.js';
 import { HighlighterOptions } from 'shiki';
+import type { HPropertyValue } from 'hastscript/lib/core.js';
+import type { HResult } from 'hastscript/lib/core.js';
+import type { HStyle } from 'hastscript/lib/core.js';
 import type { IThemedToken } from 'shiki';
 import type { Root } from 'hast';
 
@@ -14,38 +16,38 @@ import type { Root } from 'hast';
 export function createHighlighter(options: HighlighterOptions): Promise<MdvexHighlighter>;
 
 // @public
-export interface IElementsOptions {
-    // Warning: (ae-forgotten-export) The symbol "ICodeElementProps" needs to be exported by the entry point index.d.ts
-    readonly code: (props: Partial<ICodeElementProps>) => Element_2;
-    // Warning: (ae-forgotten-export) The symbol "ILineElementProps" needs to be exported by the entry point index.d.ts
-    readonly line: (props: Partial<ILineElementProps>) => Element_2;
-    // Warning: (ae-forgotten-export) The symbol "IPreElementProps" needs to be exported by the entry point index.d.ts
-    readonly pre: (props: Partial<IPreElementProps>) => Element_2;
-    // Warning: (ae-forgotten-export) The symbol "ITokenElementProps" needs to be exported by the entry point index.d.ts
-    readonly token: (props: Partial<ITokenElementProps>) => Element_2;
-}
-
-// @public (undocumented)
 export interface IHastRendererOptions {
-    // (undocumented)
     bg?: string;
-    // (undocumented)
-    elements?: Partial<IElementsOptions>;
-    // (undocumented)
+    elements?: Partial<IRenderOptions>;
     fg?: string;
-    // (undocumented)
     langId?: string;
-    // (undocumented)
     lineOptions?: ILineOption[];
-    // (undocumented)
     themeName?: string;
 }
 
-// @public (undocumented)
+// @public
 export interface ILineOption {
-    // (undocumented)
-    classes?: string[];
+    className?: HPropertyValue;
     line: number;
+}
+
+// @public
+export interface IRenderOptions {
+    // Warning: (ae-forgotten-export) The symbol "ICodeRenderProps" needs to be exported by the entry point index.d.ts
+    readonly code: (props: ICodeRenderProps) => HResult;
+    // Warning: (ae-forgotten-export) The symbol "ILineRenderProps" needs to be exported by the entry point index.d.ts
+    readonly line: (props: ILineRenderProps) => HResult;
+    // Warning: (ae-forgotten-export) The symbol "IPreRenderProps" needs to be exported by the entry point index.d.ts
+    readonly pre: (props: IPreRenderProps) => HResult;
+    // Warning: (ae-forgotten-export) The symbol "ITokenRenderProps" needs to be exported by the entry point index.d.ts
+    readonly token: (props: ITokenRenderProps) => HResult;
+}
+
+// @public (undocumented)
+export interface IRenderToHastParams {
+    metadata?: Metadata;
+    options?: IHastRendererOptions;
+    tokens: IThemedToken[][];
 }
 
 // @public
@@ -53,20 +55,17 @@ export type MdvexHighlighter = (code: string, lang: string | undefined, metastri
 
 // @public
 export type Metadata = {
-    lineNumbers?: number[];
-    lineNumbersStart?: string | undefined;
+    lineNumbers: number[];
+    lineNumbersStart: number;
     title?: string | undefined;
+    lang?: string | undefined;
 };
 
 // @public
 export function parseMetadata(metastring: string | undefined): Metadata;
 
 // @public
-export function renderToHast({ tokens, options, metadata, }: {
-    tokens: IThemedToken[][];
-    options?: IHastRendererOptions;
-    metadata?: Metadata;
-}): Root;
+export function renderToHast({ metadata, options, tokens, }: IRenderToHastParams): Root;
 
 // (No @packageDocumentation comment for this package)
 

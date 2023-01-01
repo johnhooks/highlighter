@@ -4,6 +4,7 @@
 
 ## ILineOption interface
 
+Optional [IHastRendererOptions](./highlighter.ihastrendereroptions.md) property, allows inclusion of classes for specific line numbers.
 
 <b>Signature:</b>
 
@@ -15,6 +16,6 @@ export interface ILineOption
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [classes?](./highlighter.ilineoption.classes.md) |  | string\[\] | <i>(Optional)</i> |
+|  [className?](./highlighter.ilineoption.classname.md) |  | HPropertyValue | <i>(Optional)</i> Class name/names to include. |
 |  [line](./highlighter.ilineoption.line.md) |  | number | 1-based line number. |
 

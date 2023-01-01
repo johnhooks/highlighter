@@ -21,7 +21,15 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[javascript-react]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript-react]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -43,5 +51,6 @@
     "**/vscode-extension/**",
     "**/.git/objects/**",
     "./vscode/**"
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

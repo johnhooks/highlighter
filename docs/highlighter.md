@@ -10,15 +10,16 @@
 |  --- | --- |
 |  [createHighlighter(options)](./highlighter.createhighlighter.md) | Create MDsveX code highlighting function. |
 |  [parseMetadata(metastring)](./highlighter.parsemetadata.md) | Parse Markdown code fence metadata. |
-|  [renderToHast({ tokens, options, metadata, })](./highlighter.rendertohast.md) | Render Shiki tokens to hast, Hypertext Abstract Syntax Tree format. |
+|  [renderToHast({ metadata, options, tokens, })](./highlighter.rendertohast.md) | Render Shiki tokens to hast, Hypertext Abstract Syntax Tree format. |
 
 ## Interfaces
 
 |  Interface | Description |
 |  --- | --- |
-|  [IElementsOptions](./highlighter.ielementsoptions.md) | Options to modify the syntax tree of the hast code block. |
-|  [IHastRendererOptions](./highlighter.ihastrendereroptions.md) |  |
-|  [ILineOption](./highlighter.ilineoption.md) |  |
+|  [IHastRendererOptions](./highlighter.ihastrendereroptions.md) | å |
+|  [ILineOption](./highlighter.ilineoption.md) | Optional [IHastRendererOptions](./highlighter.ihastrendereroptions.md) property, allows inclusion of classes for specific line numbers. |
+|  [IRenderOptions](./highlighter.irenderoptions.md) | Options to modify the syntax tree of the hast code block. |
+|  [IRenderToHastParams](./highlighter.irendertohastparams.md) |  |
 
 ## Type Aliases
 

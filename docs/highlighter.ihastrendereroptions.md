@@ -4,6 +4,7 @@
 
 ## IHastRendererOptions interface
 
+å
 
 <b>Signature:</b>
 
@@ -15,10 +16,10 @@ export interface IHastRendererOptions
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [bg?](./highlighter.ihastrendereroptions.bg.md) |  | string | <i>(Optional)</i> |
-|  [elements?](./highlighter.ihastrendereroptions.elements.md) |  | Partial&lt;[IElementsOptions](./highlighter.ielementsoptions.md)<!-- -->&gt; | <i>(Optional)</i> |
-|  [fg?](./highlighter.ihastrendereroptions.fg.md) |  | string | <i>(Optional)</i> |
-|  [langId?](./highlighter.ihastrendereroptions.langid.md) |  | string | <i>(Optional)</i> |
-|  [lineOptions?](./highlighter.ihastrendereroptions.lineoptions.md) |  | [ILineOption](./highlighter.ilineoption.md)<!-- -->\[\] | <i>(Optional)</i> |
-|  [themeName?](./highlighter.ihastrendereroptions.themename.md) |  | string | <i>(Optional)</i> |
+|  [bg?](./highlighter.ihastrendereroptions.bg.md) |  | string | <i>(Optional)</i> Optional background color of <code>code</code> elements. |
+|  [elements?](./highlighter.ihastrendereroptions.elements.md) |  | Partial&lt;[IRenderOptions](./highlighter.irenderoptions.md)<!-- -->&gt; | <p><i>(Optional)</i> Optional elements override functions.</p><p>Allows for fine grained control overrides for the rendering of <code>pre</code> and <code>code</code> tags, lines, or individual tokens.</p> |
+|  [fg?](./highlighter.ihastrendereroptions.fg.md) |  | string | <i>(Optional)</i> Optional foreground color for <code>code</code> elements that do not have a grammar. |
+|  [langId?](./highlighter.ihastrendereroptions.langid.md) |  | string | <i>(Optional)</i> Directive to include a language identifier in the rendered output. |
+|  [lineOptions?](./highlighter.ihastrendereroptions.lineoptions.md) |  | [ILineOption](./highlighter.ilineoption.md)<!-- -->\[\] | <i>(Optional)</i> Optional classes for specific line numbers. |
+|  [themeName?](./highlighter.ihastrendereroptions.themename.md) |  | string | <i>(Optional)</i> Shiki theme name. |
 

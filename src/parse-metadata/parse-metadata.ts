@@ -1,6 +1,6 @@
 import rangeParser from "parse-numeric-range";
 
-import { Metadata } from "./types";
+import { Metadata } from "./types.js";
 
 /**
  * Parse Markdown code fence metadata.
@@ -10,7 +10,7 @@ import { Metadata } from "./types";
  * @public
  */
 export function parseMetadata(metastring: string | undefined): Metadata {
-  if (metastring === undefined) return {};
+  if (metastring === undefined) return { lineNumbers: [], lineNumbersStart: 0 };
   const titleMatch = metastring?.match(/title="(.+)"/);
   const title = titleMatch?.[1] ?? undefined;
   // full title string `title="..."`
@@ -23,8 +23,8 @@ export function parseMetadata(metastring: string | undefined): Metadata {
     /(?:\}(\d+){)?srebmuNeniLwohs(?!(.*)(\/))/
   );
   const lineNumbersStart = lineNumbersStartAtMatch?.[1]
-    ? reverseString(lineNumbersStartAtMatch[1])
-    : undefined;
+    ? parseInt(reverseString(lineNumbersStartAtMatch[1]))
+    : 1;
 
   return { lineNumbers, lineNumbersStart, title };
 }
