@@ -50,6 +50,7 @@ exports[`renderToHast > should render fixture: fixture.c 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 1,
                 "style": "counter-set: 1",
               },
               "tagName": "span",
@@ -58,6 +59,7 @@ exports[`renderToHast > should render fixture: fixture.c 1`] = `
             {
               "children": [],
               "properties": {
+                "dataLineNumber": 2,
                 "style": "counter-set: 2",
               },
               "tagName": "span",
@@ -119,6 +121,7 @@ exports[`renderToHast > should render fixture: fixture.c 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 3,
                 "style": "counter-set: 3",
               },
               "tagName": "span",
@@ -141,6 +144,7 @@ exports[`renderToHast > should render fixture: fixture.c 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 4,
                 "style": "counter-set: 4",
               },
               "tagName": "span",
@@ -215,6 +219,7 @@ exports[`renderToHast > should render fixture: fixture.c 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 5,
                 "style": "counter-set: 5",
               },
               "tagName": "span",
@@ -289,6 +294,7 @@ exports[`renderToHast > should render fixture: fixture.c 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 6,
                 "style": "counter-set: 6",
               },
               "tagName": "span",
@@ -311,6 +317,7 @@ exports[`renderToHast > should render fixture: fixture.c 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 7,
                 "style": "counter-set: 7",
               },
               "tagName": "span",
@@ -319,6 +326,7 @@ exports[`renderToHast > should render fixture: fixture.c 1`] = `
             {
               "children": [],
               "properties": {
+                "dataLineNumber": 8,
                 "style": "counter-set: 8",
               },
               "tagName": "span",
@@ -389,6 +397,7 @@ exports[`renderToHast > should render fixture: fixture.cpp 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 1,
                 "style": "counter-set: 1",
               },
               "tagName": "span",
@@ -397,6 +406,7 @@ exports[`renderToHast > should render fixture: fixture.cpp 1`] = `
             {
               "children": [],
               "properties": {
+                "dataLineNumber": 2,
                 "style": "counter-set: 2",
               },
               "tagName": "span",
@@ -458,6 +468,7 @@ exports[`renderToHast > should render fixture: fixture.cpp 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 3,
                 "style": "counter-set: 3",
               },
               "tagName": "span",
@@ -480,6 +491,7 @@ exports[`renderToHast > should render fixture: fixture.cpp 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 4,
                 "style": "counter-set: 4",
               },
               "tagName": "span",
@@ -580,6 +592,7 @@ exports[`renderToHast > should render fixture: fixture.cpp 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 5,
                 "style": "counter-set: 5",
               },
               "tagName": "span",
@@ -654,6 +667,7 @@ exports[`renderToHast > should render fixture: fixture.cpp 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 6,
                 "style": "counter-set: 6",
               },
               "tagName": "span",
@@ -676,6 +690,7 @@ exports[`renderToHast > should render fixture: fixture.cpp 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 7,
                 "style": "counter-set: 7",
               },
               "tagName": "span",
@@ -684,6 +699,7 @@ exports[`renderToHast > should render fixture: fixture.cpp 1`] = `
             {
               "children": [],
               "properties": {
+                "dataLineNumber": 8,
                 "style": "counter-set: 8",
               },
               "tagName": "span",
@@ -741,6 +757,7 @@ exports[`renderToHast > should render fixture: fixture.css 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 1,
                 "style": "counter-set: 1",
               },
               "tagName": "span",
@@ -828,6 +845,7 @@ exports[`renderToHast > should render fixture: fixture.css 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 2,
                 "style": "counter-set: 2",
               },
               "tagName": "span",
@@ -850,6 +868,7 @@ exports[`renderToHast > should render fixture: fixture.css 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 3,
                 "style": "counter-set: 3",
               },
               "tagName": "span",
@@ -858,6 +877,7 @@ exports[`renderToHast > should render fixture: fixture.css 1`] = `
             {
               "children": [],
               "properties": {
+                "dataLineNumber": 4,
                 "style": "counter-set: 4",
               },
               "tagName": "span",
@@ -954,6 +974,7 @@ exports[`renderToHast > should render fixture: fixture.html 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 1,
                 "style": "counter-set: 1",
               },
               "tagName": "span",
@@ -1002,6 +1023,7 @@ exports[`renderToHast > should render fixture: fixture.html 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 2,
                 "style": "counter-set: 2",
               },
               "tagName": "span",
@@ -1050,6 +1072,7 @@ exports[`renderToHast > should render fixture: fixture.html 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 3,
                 "style": "counter-set: 3",
               },
               "tagName": "span",
@@ -1098,6 +1121,7 @@ exports[`renderToHast > should render fixture: fixture.html 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 4,
                 "style": "counter-set: 4",
               },
               "tagName": "span",
@@ -1146,6 +1170,7 @@ exports[`renderToHast > should render fixture: fixture.html 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 5,
                 "style": "counter-set: 5",
               },
               "tagName": "span",
@@ -1220,6 +1245,7 @@ exports[`renderToHast > should render fixture: fixture.html 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 6,
                 "style": "counter-set: 6",
               },
               "tagName": "span",
@@ -1268,6 +1294,7 @@ exports[`renderToHast > should render fixture: fixture.html 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 7,
                 "style": "counter-set: 7",
               },
               "tagName": "span",
@@ -1316,6 +1343,7 @@ exports[`renderToHast > should render fixture: fixture.html 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 8,
                 "style": "counter-set: 8",
               },
               "tagName": "span",
@@ -1324,6 +1352,7 @@ exports[`renderToHast > should render fixture: fixture.html 1`] = `
             {
               "children": [],
               "properties": {
+                "dataLineNumber": 9,
                 "style": "counter-set: 9",
               },
               "tagName": "span",
@@ -1407,6 +1436,7 @@ exports[`renderToHast > should render fixture: fixture.js 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 1,
                 "style": "counter-set: 1",
               },
               "tagName": "span",
@@ -1533,6 +1563,7 @@ exports[`renderToHast > should render fixture: fixture.js 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 2,
                 "style": "counter-set: 2",
               },
               "tagName": "span",
@@ -1672,6 +1703,7 @@ exports[`renderToHast > should render fixture: fixture.js 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 3,
                 "style": "counter-set: 3",
               },
               "tagName": "span",
@@ -1720,6 +1752,7 @@ exports[`renderToHast > should render fixture: fixture.js 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 4,
                 "style": "counter-set: 4",
               },
               "tagName": "span",
@@ -1846,6 +1879,7 @@ exports[`renderToHast > should render fixture: fixture.js 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 5,
                 "style": "counter-set: 5",
               },
               "tagName": "span",
@@ -1868,6 +1902,7 @@ exports[`renderToHast > should render fixture: fixture.js 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 6,
                 "style": "counter-set: 6",
               },
               "tagName": "span",
@@ -1890,6 +1925,7 @@ exports[`renderToHast > should render fixture: fixture.js 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 7,
                 "style": "counter-set: 7",
               },
               "tagName": "span",
@@ -1898,6 +1934,7 @@ exports[`renderToHast > should render fixture: fixture.js 1`] = `
             {
               "children": [],
               "properties": {
+                "dataLineNumber": 8,
                 "style": "counter-set: 8",
               },
               "tagName": "span",
@@ -1959,6 +1996,7 @@ exports[`renderToHast > should render fixture: fixture.js 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 9,
                 "style": "counter-set: 9",
               },
               "tagName": "span",
@@ -1967,6 +2005,7 @@ exports[`renderToHast > should render fixture: fixture.js 1`] = `
             {
               "children": [],
               "properties": {
+                "dataLineNumber": 10,
                 "style": "counter-set: 10",
               },
               "tagName": "span",
@@ -2037,6 +2076,7 @@ exports[`renderToHast > should render fixture: fixture.rb 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 1,
                 "style": "counter-set: 1",
               },
               "tagName": "span",
@@ -2045,6 +2085,7 @@ exports[`renderToHast > should render fixture: fixture.rb 1`] = `
             {
               "children": [],
               "properties": {
+                "dataLineNumber": 2,
                 "style": "counter-set: 2",
               },
               "tagName": "span",
@@ -2102,6 +2143,7 @@ exports[`renderToHast > should render fixture: fixture.sh 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 1,
                 "style": "counter-set: 1",
               },
               "tagName": "span",
@@ -2228,6 +2270,7 @@ exports[`renderToHast > should render fixture: fixture.sh 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 2,
                 "style": "counter-set: 2",
               },
               "tagName": "span",
@@ -2236,6 +2279,7 @@ exports[`renderToHast > should render fixture: fixture.sh 1`] = `
             {
               "children": [],
               "properties": {
+                "dataLineNumber": 3,
                 "style": "counter-set: 3",
               },
               "tagName": "span",
@@ -2336,6 +2380,7 @@ exports[`renderToHast > should render fixture: fixture.sh 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 4,
                 "style": "counter-set: 4",
               },
               "tagName": "span",
@@ -2397,6 +2442,7 @@ exports[`renderToHast > should render fixture: fixture.sh 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 5,
                 "style": "counter-set: 5",
               },
               "tagName": "span",
@@ -2419,6 +2465,7 @@ exports[`renderToHast > should render fixture: fixture.sh 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 6,
                 "style": "counter-set: 6",
               },
               "tagName": "span",
@@ -2427,6 +2474,7 @@ exports[`renderToHast > should render fixture: fixture.sh 1`] = `
             {
               "children": [],
               "properties": {
+                "dataLineNumber": 7,
                 "style": "counter-set: 7",
               },
               "tagName": "span",
@@ -2435,6 +2483,7 @@ exports[`renderToHast > should render fixture: fixture.sh 1`] = `
             {
               "children": [],
               "properties": {
+                "dataLineNumber": 8,
                 "style": "counter-set: 8",
               },
               "tagName": "span",
@@ -2622,6 +2671,7 @@ exports[`renderToHast > should render fixture: fixture.ts 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 1,
                 "style": "counter-set: 1",
               },
               "tagName": "span",
@@ -2748,6 +2798,7 @@ exports[`renderToHast > should render fixture: fixture.ts 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 2,
                 "style": "counter-set: 2",
               },
               "tagName": "span",
@@ -2887,6 +2938,7 @@ exports[`renderToHast > should render fixture: fixture.ts 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 3,
                 "style": "counter-set: 3",
               },
               "tagName": "span",
@@ -2935,6 +2987,7 @@ exports[`renderToHast > should render fixture: fixture.ts 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 4,
                 "style": "counter-set: 4",
               },
               "tagName": "span",
@@ -3061,6 +3114,7 @@ exports[`renderToHast > should render fixture: fixture.ts 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 5,
                 "style": "counter-set: 5",
               },
               "tagName": "span",
@@ -3083,6 +3137,7 @@ exports[`renderToHast > should render fixture: fixture.ts 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 6,
                 "style": "counter-set: 6",
               },
               "tagName": "span",
@@ -3105,6 +3160,7 @@ exports[`renderToHast > should render fixture: fixture.ts 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 7,
                 "style": "counter-set: 7",
               },
               "tagName": "span",
@@ -3113,6 +3169,7 @@ exports[`renderToHast > should render fixture: fixture.ts 1`] = `
             {
               "children": [],
               "properties": {
+                "dataLineNumber": 8,
                 "style": "counter-set: 8",
               },
               "tagName": "span",
@@ -3174,6 +3231,7 @@ exports[`renderToHast > should render fixture: fixture.ts 1`] = `
                 },
               ],
               "properties": {
+                "dataLineNumber": 9,
                 "style": "counter-set: 9",
               },
               "tagName": "span",
@@ -3182,6 +3240,7 @@ exports[`renderToHast > should render fixture: fixture.ts 1`] = `
             {
               "children": [],
               "properties": {
+                "dataLineNumber": 10,
                 "style": "counter-set: 10",
               },
               "tagName": "span",

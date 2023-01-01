@@ -51,7 +51,7 @@ export interface IRenderToHastParams {
 }
 
 // @public
-export type MdvexHighlighter = (code: string, lang: string | undefined, metastring: string | undefined) => string | Promise<string>;
+export type MdvexHighlighter = (code: string, lang: string | undefined, metastring?: string | undefined) => string | Promise<string>;
 
 // @public
 export type Metadata = {

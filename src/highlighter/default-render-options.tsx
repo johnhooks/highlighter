@@ -29,7 +29,7 @@ export const defaultRenderOptions: IRenderOptions = {
     const style = { "counter-set": lineNumber };
 
     return (
-      <span style={style} dataHighlighted={highlighted}>
+      <span style={style} dataHighlighted={highlighted} dataLineNumber={lineNumber}>
         {children}
       </span>
     );

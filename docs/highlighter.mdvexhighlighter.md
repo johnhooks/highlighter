@@ -11,5 +11,5 @@ NOTE: not exported from `mdsvex`<!-- -->, so its copied here.
 <b>Signature:</b>
 
 ```typescript
-export type MdvexHighlighter = (code: string, lang: string | undefined, metastring: string | undefined) => string | Promise<string>;
+export type MdvexHighlighter = (code: string, lang: string | undefined, metastring?: string | undefined) => string | Promise<string>;
 ```

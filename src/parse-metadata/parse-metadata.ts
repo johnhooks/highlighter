@@ -10,7 +10,7 @@ import { Metadata } from "./types.js";
  * @public
  */
 export function parseMetadata(metastring: string | undefined): Metadata {
-  if (metastring === undefined) return { lineNumbers: [], lineNumbersStart: 0 };
+  if (metastring === undefined) return { lineNumbers: [], lineNumbersStart: 1 };
   const titleMatch = metastring?.match(/title="(.+)"/);
   const title = titleMatch?.[1] ?? undefined;
   // full title string `title="..."`
