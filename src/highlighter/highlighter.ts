@@ -14,7 +14,7 @@ import { renderToHast } from "./render-to-hast.js";
 export type MdvexHighlighter = (
   code: string,
   lang: string | undefined,
-  metastring: string | undefined
+  metastring?: string | undefined
 ) => string | Promise<string>;
 
 /**
@@ -39,7 +39,7 @@ export async function createHighlighter(options: HighlighterOptions): Promise<Md
   return function highlighter(
     code: string,
     lang: string | undefined,
-    metastring: string | undefined
+    metastring?: string | undefined
   ): string {
     if (!lang) return `<pre><code>${code}</code></pre>`;
 

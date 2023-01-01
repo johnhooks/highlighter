@@ -13,7 +13,9 @@
     "noEmit": true,
 
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+
+    "types": ["vitest/globals", "@testing-library/dom", "@testing-library/jest-dom"]
   },
   "include": ["**/*", "../src"],
   "references": [{ "path": "../src/highlighter" }, { "path": "../src/parse-metadata" }]
