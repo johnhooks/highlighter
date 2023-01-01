@@ -270,7 +270,7 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@microsoft/api-documenter@^7.19.27":
+"@microsoft/api-documenter@7.19.27":
   version "7.19.27"
   resolved "https://registry.yarnpkg.com/@microsoft/api-documenter/-/api-documenter-7.19.27.tgz#6ada041425f3772fe8befb14ecd85640544632dd"
   integrity sha512-KKNUnDlhRx+tYZsDt3Bn8OqdpCS8V9pce+ZvCjkL+nGHN4G2w1lqAtm82VdzGYgG8HgrwqZ72/Z2bsxKvPho7g==
@@ -636,7 +636,7 @@
     "@types/node" ">=8.9.0"
     axios "^0.21.1"
 
-"@testing-library/dom@^8.11.1", "@testing-library/dom@^8.19.1":
+"@testing-library/dom@8.19.1", "@testing-library/dom@^8.11.1":
   version "8.19.1"
   resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-8.19.1.tgz#0e2dafd281dedb930bb235eac1045470b4129d0e"
   integrity sha512-P6iIPyYQ+qH8CvGauAqanhVnjrnRe0IZFSYCeGkSRW9q3u8bdVn2NPI+lasFyVsEQn1J/IFmp5Aax41+dAP9wg==
