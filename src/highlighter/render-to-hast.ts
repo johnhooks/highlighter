@@ -5,117 +5,122 @@
  * @see {@link https://github.com/atomiks/rehype-pretty-code/blob/e24f8415c8264dc868006ced839d3cb7445e716a/src/index.js | rehype-pretty-code/src/index.js} was inspiration for this module.
  */
 
-import type { Root, Element } from "hast";
+import type { Root } from "hast";
 import { h } from "hastscript";
 import type { IThemedToken } from "shiki";
 import { FontStyle } from "shiki";
 
-import type { Metadata } from "../meta-parser/index.js";
+import type { Metadata } from "../parse-metadata/index.js";
 
-import type { IHastRendererOptions, ILineOption, IElementsOptions } from "./types.js";
+import { defaultRenderOptions } from "./default-render-options.js";
+import type {
+  IHastRendererOptions,
+  ILineOption,
+  IRenderOptions,
+  IRenderToHastParams,
+} from "./types.js";
 import { groupBy, escapeHtml } from "./utils.js";
-
-const defaultElements: IElementsOptions = {
-  pre({ style, children }) {
-    return h("pre", { style }, children);
-  },
-
-  code({ children }) {
-    return h("code", {}, children);
-  },
-
-  line({ children }) {
-    return h("span", {}, children);
-  },
-
-  token({ style, children }) {
-    return h("span", { style }, children);
-  },
-};
 
 /**
  * Render Shiki tokens to hast, Hypertext Abstract Syntax Tree format.
  *
- * @param tokens - Shiki highlighted tokens to render.
- * @param options - Options to modify the render function.
- * @param metadata - The code block metadata.
+ * @param renderParams - The render {@link IRenderToHastParams | parameters}
  * @returns A hast syntax tree for a highlighted code block.
  * @public
  */
 export function renderToHast({
-  tokens,
+  metadata = { lineNumbers: [], lineNumbersStart: 1 },
   options = {},
-  metadata = {},
-}: {
-  tokens: IThemedToken[][];
-  options?: IHastRendererOptions;
-  metadata?: Metadata;
-}): Root {
+  tokens,
+}: IRenderToHastParams): Root {
   // If the user supplied custom elements override the defaults.
-  options.elements = Object.assign(defaultElements, options.elements || {});
-  const pre = options.elements?.["pre"] as IElementsOptions["pre"];
-  const code = options.elements?.["code"] as IElementsOptions["code"];
+  options.elements = Object.assign(defaultRenderOptions, options.elements || {});
+  const pre = options.elements?.["pre"] as IRenderOptions["pre"];
+  const code = options.elements?.["code"] as IRenderOptions["code"];
 
-  const lineNodes = mapLinesToHast({ lines: tokens, options, metadata });
-  const codeNode = code({ children: lineNodes });
-  const preNode = pre({ children: [codeNode] });
+  const lineNodes = renderLines({ lines: tokens, options, metadata });
+  const codeNode = code({ children: lineNodes, meta: metadata });
+  const preNode = pre({ children: [codeNode], meta: metadata });
 
   return h(null, [preNode]);
 }
 
+/**
+ *  Kept for compatibility with {@link shiki#renderToHtml | renderToHtml}
+ *
+ * @internal
+ */
 function getLineClasses(lineOptions: ILineOption[]): string[] {
   const lineClasses = new Set(["line"]);
   for (const lineOption of lineOptions) {
-    for (const lineClass of lineOption.classes ?? []) {
-      lineClasses.add(lineClass);
+    if (Array.isArray(lineOption.className)) {
+      for (const lineClass of lineOption.className ?? []) {
+        if (typeof lineClass === "string") {
+          lineClasses.add(lineClass);
+        }
+      }
     }
   }
   return Array.from(lineClasses);
 }
 
-function mapLinesToHast({
+/**
+ * Render the matrix of Shiki tokens to hast.
+ *
+ * @internal
+ */
+function renderLines({
   lines,
+  metadata,
   options = {},
-  metadata = {},
 }: {
   lines: IThemedToken[][];
+  metadata: Metadata;
   options?: IHastRendererOptions;
-  metadata?: Metadata;
-}): Element[] {
+}) {
   const optionsByLineNumber = groupBy(options.lineOptions ?? [], (option) => option.line);
-  const line = options.elements?.["line"] as IElementsOptions["line"];
+  const line = options.elements?.["line"] as IRenderOptions["line"];
 
   return lines.map((tokens, index) => {
     const lineNumber = index + 1;
     const lineOptions = optionsByLineNumber.get(lineNumber) ?? [];
     const lineClasses = getLineClasses(lineOptions).join(" ");
+
     const children = tokens.map((token, index) => {
-      return mapTokenToHast({ token, index, options, metadata });
+      return renderToken({ token, tokens, index, options, metadata });
     });
 
     return line({
-      className: lineClasses,
-      lines,
-      line: tokens,
-      index,
       children,
+      className: lineClasses,
+      index,
+      line: tokens,
+      lines,
+      meta: metadata,
     });
   });
 }
 
-function mapTokenToHast({
-  token: shikiToken,
+/**
+ * Render a Shiki token to hast.
+ *
+ * @internal
+ */
+function renderToken({
   index,
+  metadata,
   options = {},
-}: //  metadata = {},
-
-{
-  token: IThemedToken;
+  token: shikiToken,
+  tokens,
+}: {
   index: number;
-  options: IHastRendererOptions;
+
   metadata: Metadata;
-}): Element {
-  const token = options.elements?.["token"] as IElementsOptions["token"];
+  options: IHastRendererOptions;
+  token: IThemedToken;
+  tokens: IThemedToken[];
+}) {
+  const token = options.elements?.["token"] as IRenderOptions["token"];
 
   const cssDeclarations = [`color: ${shikiToken.color || options.fg}`];
 
@@ -136,7 +141,9 @@ function mapTokenToHast({
   return token({
     style: cssDeclarations.join("; "),
     token: shikiToken,
+    tokens,
     index,
     children,
+    meta: metadata,
   });
 }

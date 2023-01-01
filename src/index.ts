@@ -1,2 +1,2 @@
 export * from "./highlighter/index.js";
-export * from "./meta-parser/index.js";
+export * from "./parse-metadata/index.js";

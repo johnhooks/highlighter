@@ -7,6 +7,8 @@
     "target": "ES2018",
     "module": "ES2015",
     "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "jsxImportSource": "hastscript",
 
     "declaration": true,
     "composite": true,

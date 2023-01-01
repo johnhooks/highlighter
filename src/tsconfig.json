@@ -4,5 +4,5 @@
   "compilerOptions": {
     "emitDeclarationOnly": false,
   },
-  "references": [{ "path": "./highlighter" }, { "path": "./meta-parser" }]
+  "references": [{ "path": "./highlighter" }, { "path": "./parse-metadata" }]
 }

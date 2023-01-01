@@ -1,7 +1,7 @@
 import { toHtml } from "hast-util-to-html";
 import { getHighlighter, type HighlighterOptions } from "shiki";
 
-import { parseMetadata } from "../meta-parser/index.js";
+import { parseMetadata } from "../parse-metadata/index.js";
 
 import { renderToHast } from "./render-to-hast.js";
 

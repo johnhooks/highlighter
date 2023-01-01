@@ -4,8 +4,12 @@
 
 ## IHastRendererOptions.elements property
 
+Optional elements override functions.
+
+Allows for fine grained control overrides for the rendering of `pre` and `code` tags, lines, or individual tokens.
+
 <b>Signature:</b>
 
 ```typescript
-elements?: Partial<IElementsOptions>;
+elements?: Partial<IRenderOptions>;
 ```

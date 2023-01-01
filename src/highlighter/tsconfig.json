@@ -8,7 +8,7 @@
   },
 
   "references": [
-    { "path": "../meta-parser" }
+    { "path": "../parse-metadata" }
   ],
 
   "include": ["**/*"]

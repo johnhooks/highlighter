@@ -4,6 +4,8 @@
 
 ## IHastRendererOptions.langId property
 
+Directive to include a language identifier in the rendered output.
+
 <b>Signature:</b>
 
 ```typescript

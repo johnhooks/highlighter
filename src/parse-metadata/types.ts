@@ -7,15 +7,20 @@ export type Metadata = {
   /**
    * The lines to highlight.
    */
-  lineNumbers?: number[];
+  lineNumbers: number[];
 
   /**
    * The initial line number to start from.
    */
-  lineNumbersStart?: string | undefined;
+  lineNumbersStart: number;
 
   /**
-   * The code block title.
+   * The title of the code block.
    */
   title?: string | undefined;
+
+  /**
+   * The language of the code block.
+   */
+  lang?: string | undefined;
 };

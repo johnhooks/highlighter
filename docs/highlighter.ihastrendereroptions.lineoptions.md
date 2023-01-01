@@ -4,6 +4,8 @@
 
 ## IHastRendererOptions.lineOptions property
 
+Optional classes for specific line numbers.
+
 <b>Signature:</b>
 
 ```typescript

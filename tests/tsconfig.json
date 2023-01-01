@@ -4,14 +4,17 @@
     "outDir": "./build",
 
     "target": "esnext",
-    "module": "nodenext",
+    "module": "NodeNext",
     "moduleResolution": "nodenext",
+    "jsx": "react-jsx",
+    "jsxImportSource": "hastscript",
+
     "strict": false,
     "noEmit": true,
 
     "esModuleInterop": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
   "include": ["**/*", "../src"],
-  "references": [{ "path": "../src/highlighter" }]
+  "references": [{ "path": "../src/highlighter" }, { "path": "../src/parse-metadata" }]
 }
