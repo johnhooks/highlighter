@@ -1,11 +1,10 @@
-name: Run build pipeline
+name: Release if needed
 
 on:
   workflow_dispatch:
-  pull_request:
-    types: [opened, synchronize, reopened]
-    branches:
-      - "**/*"
+  push:
+    -branches:
+      - main
 
 env:
   # Used by scripts/build-types.sh
@@ -20,3 +19,9 @@ jobs:
 
       - name: Build application
         uses: ./.github/actions/build
+
+      - name: Release if needed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: yarn run shipjs trigger
