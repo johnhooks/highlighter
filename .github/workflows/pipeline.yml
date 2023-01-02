@@ -22,5 +22,7 @@ jobs:
         uses: ./.github/actions/build
 
       - name: Release if needed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: yarn run shipjs trigger
