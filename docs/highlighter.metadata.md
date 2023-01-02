@@ -12,6 +12,7 @@ Markdown Code Block Metadata
 export type Metadata = {
     lineNumbers: number[];
     lineNumbersStart: number;
+    showLineNumbers: boolean;
     title?: string | undefined;
     lang?: string | undefined;
 };

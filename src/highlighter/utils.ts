@@ -22,11 +22,11 @@ export function groupBy<TElement, TKey>(
 }
 
 const htmlEscapes = {
-  "&": "&amp;",
-  "<": "&lt;",
-  ">": "&gt;",
-  '"': "&quot;",
-  "'": "&#39;",
+  // "&": "&amp;",
+  // "<": "&lt;",
+  // ">": "&gt;",
+  // '"': "&quot;",
+  // "'": "&#39;",
   // Svelty escapes
   "{": "&#123;",
   "}": "&#125;",
@@ -42,10 +42,17 @@ const htmlEscapes = {
  * @see {@link https://github.com/pngwn/MDsveX/blob/6c60fe68c335fce559db9690fbf5e69ef539d37d/packages/mdsvex/src/transformers/index.ts#L571 | MDsveX transformers}
  */
 export function escapeHtml(html: string) {
-  return (
-    html
-      .replace(/[&<>"'{}`]/g, (chr) => htmlEscapes[chr as keyof typeof htmlEscapes])
-      // extra Svelty escapes
-      .replace(/\\([trn])/g, "&#92;$1")
-  );
+  const chars = [...html];
+  const escaped = [];
+
+  for (const char of chars) {
+    const escape = htmlEscapes[char as keyof typeof htmlEscapes];
+    if (escape) {
+      escaped.push(escape);
+    } else {
+      escaped.push(char);
+    }
+  }
+
+  return escaped.join("").replace(/\\([trn])/g, "&#92;$1");
 }

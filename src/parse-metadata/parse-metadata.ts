@@ -10,7 +10,9 @@ import { Metadata } from "./types.js";
  * @public
  */
 export function parseMetadata(metastring: string | undefined): Metadata {
-  if (metastring === undefined) return { lineNumbers: [], lineNumbersStart: 1 };
+  if (metastring === undefined) {
+    return { lineNumbers: [], lineNumbersStart: 1, showLineNumbers: false };
+  }
   const titleMatch = metastring?.match(/title="(.+)"/);
   const title = titleMatch?.[1] ?? undefined;
   // full title string `title="..."`
@@ -19,14 +21,17 @@ export function parseMetadata(metastring: string | undefined): Metadata {
 
   const lineNumbers = metastring ? rangeParser(metaWithoutTitle.match(/{(.*)}/)?.[1] ?? "") : [];
 
+  const showLineNumbers = /srebmuNeniLwohs(?!(.*)(\/))/.test(reverseString(metastring));
+
   const lineNumbersStartAtMatch = reverseString(metastring)?.match(
     /(?:\}(\d+){)?srebmuNeniLwohs(?!(.*)(\/))/
   );
+
   const lineNumbersStart = lineNumbersStartAtMatch?.[1]
     ? parseInt(reverseString(lineNumbersStartAtMatch[1]))
     : 1;
 
-  return { lineNumbers, lineNumbersStart, title };
+  return { lineNumbers, lineNumbersStart, showLineNumbers, title };
 }
 
 /**

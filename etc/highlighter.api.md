@@ -57,6 +57,7 @@ export type MdvexHighlighter = (code: string, lang: string | undefined, metastri
 export type Metadata = {
     lineNumbers: number[];
     lineNumbersStart: number;
+    showLineNumbers: boolean;
     title?: string | undefined;
     lang?: string | undefined;
 };

@@ -19,7 +19,7 @@ import type {
   IRenderOptions,
   IRenderToHastParams,
 } from "./types.js";
-import { groupBy, escapeHtml } from "./utils.js";
+import { groupBy } from "./utils.js";
 
 /**
  * Render Shiki tokens to hast, Hypertext Abstract Syntax Tree format.
@@ -29,7 +29,7 @@ import { groupBy, escapeHtml } from "./utils.js";
  * @public
  */
 export function renderToHast({
-  metadata = { lineNumbers: [], lineNumbersStart: 1 },
+  metadata = { lineNumbers: [], lineNumbersStart: 1, showLineNumbers: false },
   options = {},
   tokens,
 }: IRenderToHastParams): Root {
@@ -136,7 +136,7 @@ function renderToken({
     }
   }
 
-  const children = [escapeHtml(shikiToken.content)];
+  const children = [shikiToken.content];
 
   return token({
     style: cssDeclarations.join("; "),

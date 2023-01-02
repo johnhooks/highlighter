@@ -15,6 +15,11 @@ export type Metadata = {
   lineNumbersStart: number;
 
   /**
+   * Boolean indicating where or not to show line numbers.
+   */
+  showLineNumbers: boolean;
+
+  /**
    * The title of the code block.
    */
   title?: string | undefined;

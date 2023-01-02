@@ -19,17 +19,17 @@ export const defaultRenderOptions: IRenderOptions = {
   },
 
   code({ children, meta }) {
-    return <code dataLanguage={meta.lang}>{children}</code>;
+    const { lang, showLineNumbers } = meta;
+    return <code dataLanguage={lang} dataLineNumbers={showLineNumbers}>{children}</code>;
   },
 
   line({ children, meta, index }) {
     const { lineNumbers, lineNumbersStart } = meta;
     const lineNumber = index + lineNumbersStart;
     const highlighted = lineNumbers?.includes(index) ? true : null;
-    const style = { "counter-set": lineNumber };
 
     return (
-      <span style={style} dataHighlighted={highlighted} dataLineNumber={lineNumber}>
+      <span dataHighlighted={highlighted} dataLineNumber={lineNumber}>
         {children}
       </span>
     );
