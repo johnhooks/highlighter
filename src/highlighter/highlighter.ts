@@ -48,6 +48,9 @@ export async function createHighlighter(options: HighlighterOptions): Promise<Md
     const metadata = parseMetadata(metastring);
     const tree = renderToHast({ tokens, metadata });
 
+    /**
+     * {@link hast-util-to-html#toHtml | toHtml} escapes `&` and `<`, so `escapeHtml` has to be called here.
+     */
     return escapeHtml(toHtml(tree));
   };
 }
