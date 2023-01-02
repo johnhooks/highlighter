@@ -2,6 +2,7 @@
 
 - Fix double HTML escape issue.
 - Rename public types.
+- Add release github workflow
 
 # 1.0.0-alpha.4 (2022-12-29)
 
