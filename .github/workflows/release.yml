@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   push:
     -branches:
+      - "!release/**/*"
       - main
 
 env:
@@ -11,7 +12,7 @@ env:
   CI: true
 
 jobs:
-  pipeline:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,6 +20,15 @@ jobs:
 
       - name: Build application
         uses: ./.github/actions/build
+
+  release:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    environment: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
       - name: Release if needed
         env:
