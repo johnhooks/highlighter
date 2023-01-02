@@ -20,3 +20,7 @@ jobs:
 
       - name: Build application
         uses: ./.github/actions/build
+
+      - name: Release if needed
+        shell: bash
+        command: yarn run shipjs trigger
