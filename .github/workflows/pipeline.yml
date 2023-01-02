@@ -23,4 +23,4 @@ jobs:
 
       - name: Release if needed
         shell: bash
-        command: yarn run shipjs trigger
+        run: yarn run shipjs trigger
