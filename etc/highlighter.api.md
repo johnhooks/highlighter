@@ -5,7 +5,6 @@
 ```ts
 
 import { HighlighterOptions } from 'shiki';
-import { IThemedToken } from 'shiki';
 
 // @public
 export function createHighlighter(options: HighlighterOptions): Promise<MdvexHighlighter>;
@@ -16,24 +15,6 @@ export type MdvexHighlighter = (code: string, lang: string | undefined, metastri
 // @public
 export function parseMetadata(metastring: string | undefined): TMetadata;
 
-// Warning: (ae-forgotten-export) The symbol "TElement" needs to be exported by the entry point index.d.ts
-//
-// @public
-export function renderToHast({ tokens: lines, options, metadata, }: TRenderToHastParams): TElement;
-
-// @public
-export type THastRendererOptions = {
-    fg?: string;
-    elements?: Partial<TRenderOptions>;
-    themeName?: string;
-};
-
-// @public
-export type TLineOption = {
-    line: number;
-    className?: string | string[];
-};
-
 // @public
 export type TMetadata = {
     lineNumbers: number[];
@@ -42,28 +23,6 @@ export type TMetadata = {
     title?: string | undefined;
     lang?: string | undefined;
 };
-
-// @public
-export type TRenderOptions = {
-    readonly pre: (props: TPreProps) => TElement;
-    readonly code: (props: TCodeProps) => TElement;
-    readonly line: (props: TLineProps) => TElement;
-    readonly token: (props: TTokenProps) => TElement;
-};
-
-// @public (undocumented)
-export interface TRenderToHastParams {
-    metadata?: TMetadata;
-    options?: THastRendererOptions;
-    tokens: IThemedToken[][];
-}
-
-// Warnings were encountered during analysis:
-//
-// src/highlighter/types.ts:155:3 - (ae-forgotten-export) The symbol "TPreProps" needs to be exported by the entry point index.d.ts
-// src/highlighter/types.ts:159:3 - (ae-forgotten-export) The symbol "TCodeProps" needs to be exported by the entry point index.d.ts
-// src/highlighter/types.ts:164:3 - (ae-forgotten-export) The symbol "TLineProps" needs to be exported by the entry point index.d.ts
-// src/highlighter/types.ts:169:3 - (ae-forgotten-export) The symbol "TTokenProps" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 

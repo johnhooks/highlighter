@@ -1,8 +1,8 @@
 import { h } from "./hast-utils.js";
-import { TRenderOptions } from "./types";
+import { TRenderOptions } from "./types.js";
 
 /**
- * The default renderers for {@link renderToHast}
+ * The default renderers for {@link ./render-to-hast#renderToHast}
  *
  * @internal
  */

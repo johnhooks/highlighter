@@ -27,7 +27,6 @@ export type MdvexHighlighter = (
  */
 export async function createHighlighter(options: HighlighterOptions): Promise<MdvexHighlighter> {
   const shikiHighlighter = await getHighlighter(options);
-
   /**
    * Highlighter function for Mdsvex codeblocks.
    *
@@ -43,14 +42,9 @@ export async function createHighlighter(options: HighlighterOptions): Promise<Md
     metastring?: string | undefined
   ): string {
     if (!lang) return `<pre><code>${escapeHtml(code)}</code></pre>`;
-
     const tokens = shikiHighlighter.codeToThemedTokens(code, lang || "txt");
     const metadata = parseMetadata(metastring);
     const tree = renderToHast({ tokens, metadata });
-
-    /**
-     * {@link hast-util-to-html#toHtml | toHtml} escapes `&` and `<`, so `escapeHtml` has to be called here.
-     */
     return toHtml(tree);
   };
 }

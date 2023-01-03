@@ -1,13 +1,13 @@
 /**
  * A super simple, probably naive hast implementation.
  *
- * The reason for not just using hast is the inability to control HTML entities in
- * the `hast-to-html-utils` package.
+ * {@link https://github.com/syntax-tree/hast-util-to-html/tree/fa187494263aa1087ba1c307abce72b2413e452e#tohtmltree-options | toHtml} escapes `&` and `<` and doesn't allow
+ * control of HTML entities.
  */
 
 import { html, find } from "property-information";
 
-import { escapeHtml } from "./utils";
+import { escapeHtml } from "./utils.js";
 
 export type TProperty = string | string[] | boolean | undefined;
 export type TProperties = Record<string, TProperty>;
@@ -41,7 +41,7 @@ function renderAttributes(attributes: TProperties): string {
     const { attribute, booleanish, commaSeparated } = find(html, name);
 
     if (value === true) {
-      if (booleanish) {
+      if (booleanish || /^data-/.test(attribute)) {
         result.push(attribute);
       }
     } else if (Array.isArray(value)) {
