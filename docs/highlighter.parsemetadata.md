@@ -9,7 +9,7 @@ Parse Markdown code fence metadata.
 <b>Signature:</b>
 
 ```typescript
-export declare function parseMetadata(metastring: string | undefined): Metadata;
+export declare function parseMetadata(metastring: string | undefined): TMetadata;
 ```
 
 ## Parameters
@@ -20,7 +20,7 @@ export declare function parseMetadata(metastring: string | undefined): Metadata;
 
 <b>Returns:</b>
 
-[Metadata](./highlighter.metadata.md)
+[TMetadata](./highlighter.tmetadata.md)
 
 Parsed metadata values object.
 

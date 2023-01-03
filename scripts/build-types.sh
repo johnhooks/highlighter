@@ -2,14 +2,14 @@
 
 args=()
 
-# Strip out `--local` flag in CI
 if [ -z $CI ] || [ $CI = false ] ; then
-  # CI is either unset or false
+  # Add `--local` flag if not present and not in CI
   args=$@
   if [[ ! " ${args[*]} " =~ " --local " ]] ; then
     args+=("--local")
   fi
 elif [ $CI = true ] ; then
+  # Strip out `--local` flag in CI
   for arg in "$@" ; do
       case "$arg" in
         '--local')

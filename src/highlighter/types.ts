@@ -1,27 +1,22 @@
-/**
- * Copy of internal types not exported by `shiki`.
- *
- * [shiki/src/types.ts](https://github.com/shikijs/shiki/blob/a585c9d6860334a6233ff1c035a42d023e016400/packages/shiki/src/types.ts#L203-L242)
- */
+import { IThemedToken } from "shiki";
 
-import type { HChild, HPropertyValue, HResult, HStyle } from "hastscript/lib/core.js";
-import type { IThemedToken } from "shiki";
+import type { TMetadata } from "../parse-metadata/types.js";
 
-import type { Metadata } from "../parse-metadata/types.js";
+import type { TChildren, TElement } from "./hast-utils.js";
 
 /**
  * @public
  */
-export interface IRenderToHastParams {
+export interface TRenderToHastParams {
   /**
    * Optional code block metadata.
    */
-  metadata?: Metadata;
+  metadata?: TMetadata;
 
   /**
    *  Options to modify the render function.
    */
-  options?: IHastRendererOptions;
+  options?: THastRendererOptions;
 
   /**
    * Shiki highlighted tokens to render.
@@ -29,51 +24,37 @@ export interface IRenderToHastParams {
   tokens: IThemedToken[][];
 }
 
-/**å
+/**
+ * Hast render options, slimmed down compared to Shiki {@link shiki#HtmlRendererOptions | HtmlRendererOptions}.
+ *
  * @public
  */
-export interface IHastRendererOptions {
+export type THastRendererOptions = {
   /**
    * Directive to include a language identifier in the rendered output.
-   */
-  langId?: string;
-
-  /**
-   * Optional foreground color for `code` elements that do not have a grammar.
    */
   fg?: string;
 
   /**
-   * Optional background color of `code` elements.
-   */
-  bg?: string;
-
-  /**
-   * Optional classes for specific line numbers.
-   */
-  lineOptions?: ILineOption[];
-
-  /**
    * Optional elements override functions.
    *
-   * Allows for fine grained control overrides for the rendering of `pre` and `code`
+   * Allows for fine grained control overrides for rendering of `pre` and `code`
    * tags, lines, or individual tokens.
    */
-  elements?: Partial<IRenderOptions>;
+  elements?: Partial<TRenderOptions>;
 
   /**
    * Shiki theme name.
    */
   themeName?: string;
-}
+};
 
 /**
- * Optional {@link IHastRendererOptions} property, allows inclusion of classes for
- * specific line numbers.
+ * To help add classes to specific line numbers.
  *
  * @public
  */
-export interface ILineOption {
+export type TLineOption = {
   /**
    * 1-based line number.
    */
@@ -82,91 +63,62 @@ export interface ILineOption {
   /**
    * Class name/names to include.
    */
-  className?: HPropertyValue;
-}
+  className?: string | string[];
+};
 
 /**
  * Common renderer props.
  *
  * @public
  */
-interface IRenderProps {
+type TRenderProps = {
   /**
    * Children of the renderer.
    *
    * IMPORTANT: It is necessary pass children down through the renderer, otherwise
    * the code block will not be properly rendered.
    */
-  children: HChild;
+  children: TChildren;
 
   /**
    * Additional information about the code block.
    */
-  meta: Metadata;
+  metadata: TMetadata;
 
   [key: string]: unknown;
-}
+};
 
 /**
  * `pre` tag renderer props.
  *
  * @public
  */
-interface IPreRenderProps extends IRenderProps {
-  /**
-   * Class name/names of the line to be rendered, as generated from a combination of
-   * the {@link LineOptions} and the defaults.
-   */
-  className?: HPropertyValue;
-
-  /**
-   * Styles applied to the token by Shiki.
-   *
-   * Should be included in the {@link hastscript#h  | h} {@link hastscript#Properties | props} argument.
-   */
-  style?: HStyle;
-}
+type TPreProps = TRenderProps;
 
 /**
  * `code` tag renderer props.
  * @public
  */
-type ICodeRenderProps = IRenderProps;
+type TCodeProps = TRenderProps;
 
 /**
  * Line renderer props.
  *
  * @public
  */
-interface ILineRenderProps extends IRenderProps {
-  /**
-   * Class name/names of the line to be rendered, as generated from a combination of
-   * the {@link LineOptions} and the defaults.
-   */
-  className?: HPropertyValue;
-
-  /**
-   * The entire Shiki code block of tokens.
-   */
-  lines: readonly IThemedToken[][];
-
-  /**
-   * The Shiki tokens of the line.
-   */
-  line: readonly IThemedToken[];
-
+type TLineProps = TRenderProps & {
   /**
    * Zero based index of the line number.
    */
   index: number;
-}
+};
 
 /**
  * Token renderer props.
  *
  * @public
  */
-interface ITokenRenderProps extends IRenderProps {
+type TTokenProps = TRenderProps & {
   /**
    * Styles applied to the token by Shiki.
    *
@@ -177,7 +129,7 @@ interface ITokenRenderProps extends IRenderProps {
   /**
    * An array of the entire line of tokens.
    */
-  tokens: readonly IThemedToken[];
+  tokens: IThemedToken[];
 
   /**
    * The Shiki {@link shiki#IThemedToken| token} to render.
@@ -188,31 +140,31 @@ interface ITokenRenderProps extends IRenderProps {
    * Zero-based index of the token position in the line.
    */
   index: number;
-}
+};
 
 /**
- * Options to modify the syntax tree of the hast code block.
+ * Options to modify the rendered HTML output.
  *
  * @public
  */
-export interface IRenderOptions {
+export type TRenderOptions = {
   /**
    * Override function for `pre` tags.
    */
-  readonly pre: (props: IPreRenderProps) => HResult;
 
+  readonly pre: (props: TPreProps) => TElement;
   /**
    * Override function for `code` tags.
    */
-  readonly code: (props: ICodeRenderProps) => HResult;
+  readonly code: (props: TCodeProps) => TElement;
 
   /**
    * Override function for code block lines.
    */
-  readonly line: (props: ILineRenderProps) => HResult;
+  readonly line: (props: TLineProps) => TElement;
 
   /**
    * Override function for code block tokens.
    */
-  readonly token: (props: ITokenRenderProps) => HResult;
-}
+  readonly token: (props: TTokenProps) => TElement;
+};

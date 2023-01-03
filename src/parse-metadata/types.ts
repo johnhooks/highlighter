@@ -3,7 +3,7 @@
  *
  * @public
  */
-export type Metadata = {
+export type TMetadata = {
   /**
    * The lines to highlight.
    */

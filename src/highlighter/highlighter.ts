@@ -1,8 +1,8 @@
-import { toHtml } from "hast-util-to-html";
 import { getHighlighter, type HighlighterOptions } from "shiki";
 
 import { parseMetadata } from "../parse-metadata/index.js";
 
+import { toHtml } from "./hast-utils.js";
 import { renderToHast } from "./render-to-hast.js";
 import { escapeHtml } from "./utils.js";
 
@@ -51,6 +51,6 @@ export async function createHighlighter(options: HighlighterOptions): Promise<Md
     /**
      * {@link hast-util-to-html#toHtml | toHtml} escapes `&` and `<`, so `escapeHtml` has to be called here.
      */
-    return escapeHtml(toHtml(tree));
+    return toHtml(tree);
   };
 }

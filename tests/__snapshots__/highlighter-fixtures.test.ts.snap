@@ -1,17 +1,368 @@
 // Vitest Snapshot v1
 
-exports[`createHighlighter > should render fixture: fixture.c 1`] = `"<pre><code><span data-line-number=\\"1\\"><span style=\\"color: var(--shiki-token-keyword)\\">#include</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-string-expression)\\">&#x3C;stdio.h></span></span><span data-line-number=\\"2\\"></span><span data-line-number=\\"3\\"><span style=\\"color: var(--shiki-token-keyword)\\">int</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-function)\\">main</span><span style=\\"color: var(--shiki-color-text)\\">()</span></span><span data-line-number=\\"4\\"><span style=\\"color: var(--shiki-color-text)\\">&#123;</span></span><span data-line-number=\\"5\\"><span style=\\"color: var(--shiki-color-text)\\">  </span><span style=\\"color: var(--shiki-token-function)\\">printf(</span><span style=\\"color: var(--shiki-token-string-expression)\\">\\"Hello World\\"</span><span style=\\"color: var(--shiki-token-function)\\">)</span><span style=\\"color: var(--shiki-color-text)\\">;</span></span><span data-line-number=\\"6\\"><span style=\\"color: var(--shiki-color-text)\\">  </span><span style=\\"color: var(--shiki-token-keyword)\\">return</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-constant)\\">0</span><span style=\\"color: var(--shiki-color-text)\\">;</span></span><span data-line-number=\\"7\\"><span style=\\"color: var(--shiki-color-text)\\">&#125;</span></span><span data-line-number=\\"8\\"></span></code></pre>"`;
+exports[`createHighlighter > should render fixture: fixture.c 1`] = `
+"<pre>
+  <code>
+    <span data-line-number=\\"1\\">
+      <span style=\\"color: var(--shiki-token-keyword)\\">#include</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&lt;stdio.h&gt;</span>
+    </span>
+    <span data-line-number=\\"2\\"></span>
+    <span data-line-number=\\"3\\">
+      <span style=\\"color: var(--shiki-token-keyword)\\">int</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-function)\\">main</span>
+      <span style=\\"color: var(--shiki-color-text)\\">()</span>
+    </span>
+    <span data-line-number=\\"4\\">
+      <span style=\\"color: var(--shiki-color-text)\\">&#123;</span>
+    </span>
+    <span data-line-number=\\"5\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-function)\\">printf(</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&quot;Hello World&quot;</span>
+      <span style=\\"color: var(--shiki-token-function)\\">)</span>
+      <span style=\\"color: var(--shiki-color-text)\\">;</span>
+    </span>
+    <span data-line-number=\\"6\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">return</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-constant)\\">0</span>
+      <span style=\\"color: var(--shiki-color-text)\\">;</span>
+    </span>
+    <span data-line-number=\\"7\\">
+      <span style=\\"color: var(--shiki-color-text)\\">&#125;</span>
+    </span>
+    <span data-line-number=\\"8\\"></span>
+  </code>
+</pre>;
+"
+`;
 
-exports[`createHighlighter > should render fixture: fixture.cpp 1`] = `"<pre><code><span data-line-number=\\"1\\"><span style=\\"color: var(--shiki-token-keyword)\\">#include</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-string-expression)\\">&#x3C;iostream></span></span><span data-line-number=\\"2\\"></span><span data-line-number=\\"3\\"><span style=\\"color: var(--shiki-token-keyword)\\">int</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-function)\\">main</span><span style=\\"color: var(--shiki-color-text)\\">()</span></span><span data-line-number=\\"4\\"><span style=\\"color: var(--shiki-color-text)\\">&#123;</span></span><span data-line-number=\\"5\\"><span style=\\"color: var(--shiki-color-text)\\">  std</span><span style=\\"color: var(--shiki-token-punctuation)\\">::</span><span style=\\"color: var(--shiki-color-text)\\">cout </span><span style=\\"color: var(--shiki-token-keyword)\\">&#x3C;&#x3C;</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-string-expression)\\">\\"Hello World\\"</span><span style=\\"color: var(--shiki-color-text)\\">;</span></span><span data-line-number=\\"6\\"><span style=\\"color: var(--shiki-color-text)\\">  </span><span style=\\"color: var(--shiki-token-keyword)\\">return</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-constant)\\">0</span><span style=\\"color: var(--shiki-color-text)\\">;</span></span><span data-line-number=\\"7\\"><span style=\\"color: var(--shiki-color-text)\\">&#125;</span></span><span data-line-number=\\"8\\"></span></code></pre>"`;
+exports[`createHighlighter > should render fixture: fixture.cpp 1`] = `
+"<pre>
+  <code>
+    <span data-line-number=\\"1\\">
+      <span style=\\"color: var(--shiki-token-keyword)\\">#include</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&lt;iostream&gt;</span>
+    </span>
+    <span data-line-number=\\"2\\"></span>
+    <span data-line-number=\\"3\\">
+      <span style=\\"color: var(--shiki-token-keyword)\\">int</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-function)\\">main</span>
+      <span style=\\"color: var(--shiki-color-text)\\">()</span>
+    </span>
+    <span data-line-number=\\"4\\">
+      <span style=\\"color: var(--shiki-color-text)\\">&#123;</span>
+    </span>
+    <span data-line-number=\\"5\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> std</span>
+      <span style=\\"color: var(--shiki-token-punctuation)\\">::</span>
+      <span style=\\"color: var(--shiki-color-text)\\">cout </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">&lt;&lt;</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&quot;Hello World&quot;</span>
+      <span style=\\"color: var(--shiki-color-text)\\">;</span>
+    </span>
+    <span data-line-number=\\"6\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">return</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-constant)\\">0</span>
+      <span style=\\"color: var(--shiki-color-text)\\">;</span>
+    </span>
+    <span data-line-number=\\"7\\">
+      <span style=\\"color: var(--shiki-color-text)\\">&#125;</span>
+    </span>
+    <span data-line-number=\\"8\\"></span>
+  </code>
+</pre>;
+"
+`;
 
-exports[`createHighlighter > should render fixture: fixture.css 1`] = `"<pre><code><span data-line-number=\\"1\\"><span style=\\"color: var(--shiki-token-function)\\">.fixture::after</span><span style=\\"color: var(--shiki-color-text)\\"> &#123;</span></span><span data-line-number=\\"2\\"><span style=\\"color: var(--shiki-color-text)\\">  </span><span style=\\"color: var(--shiki-token-constant)\\">content</span><span style=\\"color: var(--shiki-token-keyword)\\">:</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-string-expression)\\">\\"hello world\\"</span><span style=\\"color: var(--shiki-color-text)\\">;</span></span><span data-line-number=\\"3\\"><span style=\\"color: var(--shiki-color-text)\\">&#125;</span></span><span data-line-number=\\"4\\"></span></code></pre>"`;
+exports[`createHighlighter > should render fixture: fixture.css 1`] = `
+"<pre>
+  <code>
+    <span data-line-number=\\"1\\">
+      <span style=\\"color: var(--shiki-token-function)\\">.fixture::after</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> &#123;</span>
+    </span>
+    <span data-line-number=\\"2\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-constant)\\">content</span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">:</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&quot;hello world&quot;</span>
+      <span style=\\"color: var(--shiki-color-text)\\">;</span>
+    </span>
+    <span data-line-number=\\"3\\">
+      <span style=\\"color: var(--shiki-color-text)\\">&#125;</span>
+    </span>
+    <span data-line-number=\\"4\\"></span>
+  </code>
+</pre>;
+"
+`;
 
-exports[`createHighlighter > should render fixture: fixture.html 1`] = `"<pre><code><span data-line-number=\\"1\\"><span style=\\"color: var(--shiki-color-text)\\">&#x3C;!</span><span style=\\"color: var(--shiki-token-string-expression)\\">DOCTYPE</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-function)\\">html</span><span style=\\"color: var(--shiki-color-text)\\">></span></span><span data-line-number=\\"2\\"><span style=\\"color: var(--shiki-color-text)\\">&#x3C;</span><span style=\\"color: var(--shiki-token-string-expression)\\">html</span><span style=\\"color: var(--shiki-color-text)\\">></span></span><span data-line-number=\\"3\\"><span style=\\"color: var(--shiki-color-text)\\">  &#x3C;</span><span style=\\"color: var(--shiki-token-string-expression)\\">head</span><span style=\\"color: var(--shiki-color-text)\\">></span></span><span data-line-number=\\"4\\"><span style=\\"color: var(--shiki-color-text)\\">  &#x3C;/</span><span style=\\"color: var(--shiki-token-string-expression)\\">head</span><span style=\\"color: var(--shiki-color-text)\\">></span></span><span data-line-number=\\"5\\"><span style=\\"color: var(--shiki-color-text)\\">  &#x3C;</span><span style=\\"color: var(--shiki-token-string-expression)\\">body</span><span style=\\"color: var(--shiki-color-text)\\">></span></span><span data-line-number=\\"6\\"><span style=\\"color: var(--shiki-color-text)\\">    &#x3C;</span><span style=\\"color: var(--shiki-token-string-expression)\\">h1</span><span style=\\"color: var(--shiki-color-text)\\">>Hello World&#x3C;</span><span style=\\"color: var(--shiki-token-string-expression)\\">h1</span><span style=\\"color: var(--shiki-color-text)\\">></span></span><span data-line-number=\\"7\\"><span style=\\"color: var(--shiki-color-text)\\">  &#x3C;/</span><span style=\\"color: var(--shiki-token-string-expression)\\">body</span><span style=\\"color: var(--shiki-color-text)\\">></span></span><span data-line-number=\\"8\\"><span style=\\"color: var(--shiki-color-text)\\">&#x3C;/</span><span style=\\"color: var(--shiki-token-string-expression)\\">html</span><span style=\\"color: var(--shiki-color-text)\\">></span></span><span data-line-number=\\"9\\"></span></code></pre>"`;
+exports[`createHighlighter > should render fixture: fixture.html 1`] = `
+"<pre>
+  <code>
+    <span data-line-number=\\"1\\">
+      <span style=\\"color: var(--shiki-color-text)\\">&lt;!</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">DOCTYPE</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-function)\\">html</span>
+      <span style=\\"color: var(--shiki-color-text)\\">&gt;</span>
+    </span>
+    <span data-line-number=\\"2\\">
+      <span style=\\"color: var(--shiki-color-text)\\">&lt;</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">html</span>
+      <span style=\\"color: var(--shiki-color-text)\\">&gt;</span>
+    </span>
+    <span data-line-number=\\"3\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> &lt;</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">head</span>
+      <span style=\\"color: var(--shiki-color-text)\\">&gt;</span>
+    </span>
+    <span data-line-number=\\"4\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> &lt;/</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">head</span>
+      <span style=\\"color: var(--shiki-color-text)\\">&gt;</span>
+    </span>
+    <span data-line-number=\\"5\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> &lt;</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">body</span>
+      <span style=\\"color: var(--shiki-color-text)\\">&gt;</span>
+    </span>
+    <span data-line-number=\\"6\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> &lt;</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">h1</span>
+      <span style=\\"color: var(--shiki-color-text)\\">&gt;Hello World&lt;</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">h1</span>
+      <span style=\\"color: var(--shiki-color-text)\\">&gt;</span>
+    </span>
+    <span data-line-number=\\"7\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> &lt;/</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">body</span>
+      <span style=\\"color: var(--shiki-color-text)\\">&gt;</span>
+    </span>
+    <span data-line-number=\\"8\\">
+      <span style=\\"color: var(--shiki-color-text)\\">&lt;/</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">html</span>
+      <span style=\\"color: var(--shiki-color-text)\\">&gt;</span>
+    </span>
+    <span data-line-number=\\"9\\"></span>
+  </code>
+</pre>;
+"
+`;
 
-exports[`createHighlighter > should render fixture: fixture.js 1`] = `"<pre><code><span data-line-number=\\"1\\"><span style=\\"color: var(--shiki-token-keyword)\\">function</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-function)\\">hello</span><span style=\\"color: var(--shiki-color-text)\\">(value) &#123;</span></span><span data-line-number=\\"2\\"><span style=\\"color: var(--shiki-color-text)\\">  </span><span style=\\"color: var(--shiki-token-keyword)\\">if</span><span style=\\"color: var(--shiki-color-text)\\"> (</span><span style=\\"color: var(--shiki-token-keyword)\\">typeof</span><span style=\\"color: var(--shiki-color-text)\\"> value </span><span style=\\"color: var(--shiki-token-keyword)\\">===</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-string-expression)\\">\\"string\\"</span><span style=\\"color: var(--shiki-color-text)\\">) &#123;</span></span><span data-line-number=\\"3\\"><span style=\\"color: var(--shiki-color-text)\\">    </span><span style=\\"color: var(--shiki-token-constant)\\">console</span><span style=\\"color: var(--shiki-token-function)\\">.log</span><span style=\\"color: var(--shiki-color-text)\\">(</span><span style=\\"color: var(--shiki-token-string-expression)\\">&#96;Hello </span><span style=\\"color: var(--shiki-token-keyword)\\">$&#123;</span><span style=\\"color: var(--shiki-color-text)\\">value</span><span style=\\"color: var(--shiki-token-keyword)\\">&#125;</span><span style=\\"color: var(--shiki-token-string-expression)\\">&#96;</span><span style=\\"color: var(--shiki-color-text)\\">);</span></span><span data-line-number=\\"4\\"><span style=\\"color: var(--shiki-color-text)\\">  &#125; </span><span style=\\"color: var(--shiki-token-keyword)\\">else</span><span style=\\"color: var(--shiki-color-text)\\"> &#123;</span></span><span data-line-number=\\"5\\"><span style=\\"color: var(--shiki-color-text)\\">    </span><span style=\\"color: var(--shiki-token-keyword)\\">throw</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-keyword)\\">new</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-function)\\">Error</span><span style=\\"color: var(--shiki-color-text)\\">(</span><span style=\\"color: var(--shiki-token-string-expression)\\">&#96;Can not greet 'undefined'!&#96;</span><span style=\\"color: var(--shiki-color-text)\\">);</span></span><span data-line-number=\\"6\\"><span style=\\"color: var(--shiki-color-text)\\">  &#125;</span></span><span data-line-number=\\"7\\"><span style=\\"color: var(--shiki-color-text)\\">&#125;</span></span><span data-line-number=\\"8\\"></span><span data-line-number=\\"9\\"><span style=\\"color: var(--shiki-token-function)\\">hello</span><span style=\\"color: var(--shiki-color-text)\\">(</span><span style=\\"color: var(--shiki-token-string-expression)\\">\\"world!\\"</span><span style=\\"color: var(--shiki-color-text)\\">);</span></span><span data-line-number=\\"10\\"></span></code></pre>"`;
+exports[`createHighlighter > should render fixture: fixture.js 1`] = `
+"<pre>
+  <code>
+    <span data-line-number=\\"1\\">
+      <span style=\\"color: var(--shiki-token-keyword)\\">function</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-function)\\">hello</span>
+      <span style=\\"color: var(--shiki-color-text)\\">(value) &#123;</span>
+    </span>
+    <span data-line-number=\\"2\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">if</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> (</span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">typeof</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> value </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">===</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&quot;string&quot;</span>
+      <span style=\\"color: var(--shiki-color-text)\\">) &#123;</span>
+    </span>
+    <span data-line-number=\\"3\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-constant)\\">console</span>
+      <span style=\\"color: var(--shiki-token-function)\\">.log</span>
+      <span style=\\"color: var(--shiki-color-text)\\">(</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&#96;Hello </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">$&#123;</span>
+      <span style=\\"color: var(--shiki-color-text)\\">value</span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">&#125;</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&#96;</span>
+      <span style=\\"color: var(--shiki-color-text)\\">);</span>
+    </span>
+    <span data-line-number=\\"4\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> &#125; </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">else</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> &#123;</span>
+    </span>
+    <span data-line-number=\\"5\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">throw</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">new</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-function)\\">Error</span>
+      <span style=\\"color: var(--shiki-color-text)\\">(</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">
+        &#96;Can not greet &#39;undefined&#39;!&#96;
+      </span>
+      <span style=\\"color: var(--shiki-color-text)\\">);</span>
+    </span>
+    <span data-line-number=\\"6\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> &#125;</span>
+    </span>
+    <span data-line-number=\\"7\\">
+      <span style=\\"color: var(--shiki-color-text)\\">&#125;</span>
+    </span>
+    <span data-line-number=\\"8\\"></span>
+    <span data-line-number=\\"9\\">
+      <span style=\\"color: var(--shiki-token-function)\\">hello</span>
+      <span style=\\"color: var(--shiki-color-text)\\">(</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&quot;world!&quot;</span>
+      <span style=\\"color: var(--shiki-color-text)\\">);</span>
+    </span>
+    <span data-line-number=\\"10\\"></span>
+  </code>
+</pre>;
+"
+`;
 
-exports[`createHighlighter > should render fixture: fixture.rb 1`] = `"<pre><code><span data-line-number=\\"1\\"><span style=\\"color: var(--shiki-token-function)\\">puts</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-string-expression)\\">'Hello World'</span></span><span data-line-number=\\"2\\"></span></code></pre>"`;
+exports[`createHighlighter > should render fixture: fixture.rb 1`] = `
+"<pre>
+  <code>
+    <span data-line-number=\\"1\\">
+      <span style=\\"color: var(--shiki-token-function)\\">puts</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&#39;Hello World&#39;</span>
+    </span>
+    <span data-line-number=\\"2\\"></span>
+  </code>
+</pre>;
+"
+`;
 
-exports[`createHighlighter > should render fixture: fixture.sh 1`] = `"<pre><code><span data-line-number=\\"1\\"><span style=\\"color: var(--shiki-color-text)\\">file=</span><span style=\\"color: var(--shiki-token-string-expression)\\">\\"fixture\\"</span></span><span data-line-number=\\"2\\"><span style=\\"color: var(--shiki-color-text)\\">extensions=(</span><span style=\\"color: var(--shiki-token-string-expression)\\">\\"css\\"</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-string-expression)\\">\\"js\\"</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-string-expression)\\">\\"sh\\"</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-string-expression)\\">\\"sh\\"</span><span style=\\"color: var(--shiki-color-text)\\">)</span></span><span data-line-number=\\"3\\"></span><span data-line-number=\\"4\\"><span style=\\"color: var(--shiki-token-keyword)\\">for</span><span style=\\"color: var(--shiki-color-text)\\"> ext </span><span style=\\"color: var(--shiki-token-keyword)\\">in</span><span style=\\"color: var(--shiki-color-text)\\"> $&#123;extensions[*]&#125; </span><span style=\\"color: var(--shiki-token-keyword)\\">;</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-keyword)\\">do</span></span><span data-line-number=\\"5\\"><span style=\\"color: var(--shiki-color-text)\\">  </span><span style=\\"color: var(--shiki-token-function)\\">echo</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-string-expression)\\">\\"$file.$&#123;ext&#125;\\"</span></span><span data-line-number=\\"6\\"><span style=\\"color: var(--shiki-token-keyword)\\">done</span></span><span data-line-number=\\"7\\"></span><span data-line-number=\\"8\\"></span></code></pre>"`;
+exports[`createHighlighter > should render fixture: fixture.sh 1`] = `
+"<pre>
+  <code>
+    <span data-line-number=\\"1\\">
+      <span style=\\"color: var(--shiki-color-text)\\">file=</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&quot;fixture&quot;</span>
+    </span>
+    <span data-line-number=\\"2\\">
+      <span style=\\"color: var(--shiki-color-text)\\">extensions=(</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&quot;css&quot;</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&quot;js&quot;</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&quot;sh&quot;</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&quot;sh&quot;</span>
+      <span style=\\"color: var(--shiki-color-text)\\">)</span>
+    </span>
+    <span data-line-number=\\"3\\"></span>
+    <span data-line-number=\\"4\\">
+      <span style=\\"color: var(--shiki-token-keyword)\\">for</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> ext </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">in</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> $&#123;extensions[*]&#125; </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">;</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">do</span>
+    </span>
+    <span data-line-number=\\"5\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-function)\\">echo</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">
+        &quot;$file.$&#123;ext&#125;&quot;
+      </span>
+    </span>
+    <span data-line-number=\\"6\\">
+      <span style=\\"color: var(--shiki-token-keyword)\\">done</span>
+    </span>
+    <span data-line-number=\\"7\\"></span>
+    <span data-line-number=\\"8\\"></span>
+  </code>
+</pre>;
+"
+`;
 
-exports[`createHighlighter > should render fixture: fixture.ts 1`] = `"<pre><code><span data-line-number=\\"1\\"><span style=\\"color: var(--shiki-token-keyword)\\">function</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-function)\\">hello</span><span style=\\"color: var(--shiki-color-text)\\">(value</span><span style=\\"color: var(--shiki-token-keyword)\\">:</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-constant)\\">string</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-keyword)\\">|</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-constant)\\">undefined</span><span style=\\"color: var(--shiki-color-text)\\">) &#123;</span></span><span data-line-number=\\"2\\"><span style=\\"color: var(--shiki-color-text)\\">  </span><span style=\\"color: var(--shiki-token-keyword)\\">if</span><span style=\\"color: var(--shiki-color-text)\\"> (</span><span style=\\"color: var(--shiki-token-keyword)\\">typeof</span><span style=\\"color: var(--shiki-color-text)\\"> value </span><span style=\\"color: var(--shiki-token-keyword)\\">===</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-string-expression)\\">\\"string\\"</span><span style=\\"color: var(--shiki-color-text)\\">) &#123;</span></span><span data-line-number=\\"3\\"><span style=\\"color: var(--shiki-color-text)\\">    </span><span style=\\"color: var(--shiki-token-constant)\\">console</span><span style=\\"color: var(--shiki-token-function)\\">.log</span><span style=\\"color: var(--shiki-color-text)\\">(</span><span style=\\"color: var(--shiki-token-string-expression)\\">&#96;Hello </span><span style=\\"color: var(--shiki-token-keyword)\\">$&#123;</span><span style=\\"color: var(--shiki-color-text)\\">value</span><span style=\\"color: var(--shiki-token-keyword)\\">&#125;</span><span style=\\"color: var(--shiki-token-string-expression)\\">&#96;</span><span style=\\"color: var(--shiki-color-text)\\">);</span></span><span data-line-number=\\"4\\"><span style=\\"color: var(--shiki-color-text)\\">  &#125; </span><span style=\\"color: var(--shiki-token-keyword)\\">else</span><span style=\\"color: var(--shiki-color-text)\\"> &#123;</span></span><span data-line-number=\\"5\\"><span style=\\"color: var(--shiki-color-text)\\">    </span><span style=\\"color: var(--shiki-token-keyword)\\">throw</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-keyword)\\">new</span><span style=\\"color: var(--shiki-color-text)\\"> </span><span style=\\"color: var(--shiki-token-function)\\">Error</span><span style=\\"color: var(--shiki-color-text)\\">(</span><span style=\\"color: var(--shiki-token-string-expression)\\">&#96;Can not greet 'undefined'!&#96;</span><span style=\\"color: var(--shiki-color-text)\\">);</span></span><span data-line-number=\\"6\\"><span style=\\"color: var(--shiki-color-text)\\">  &#125;</span></span><span data-line-number=\\"7\\"><span style=\\"color: var(--shiki-color-text)\\">&#125;</span></span><span data-line-number=\\"8\\"></span><span data-line-number=\\"9\\"><span style=\\"color: var(--shiki-token-function)\\">hello</span><span style=\\"color: var(--shiki-color-text)\\">(</span><span style=\\"color: var(--shiki-token-string-expression)\\">\\"world!\\"</span><span style=\\"color: var(--shiki-color-text)\\">);</span></span><span data-line-number=\\"10\\"></span></code></pre>"`;
+exports[`createHighlighter > should render fixture: fixture.ts 1`] = `
+"<pre>
+  <code>
+    <span data-line-number=\\"1\\">
+      <span style=\\"color: var(--shiki-token-keyword)\\">function</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-function)\\">hello</span>
+      <span style=\\"color: var(--shiki-color-text)\\">(value</span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">:</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-constant)\\">string</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">|</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-constant)\\">undefined</span>
+      <span style=\\"color: var(--shiki-color-text)\\">) &#123;</span>
+    </span>
+    <span data-line-number=\\"2\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">if</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> (</span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">typeof</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> value </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">===</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&quot;string&quot;</span>
+      <span style=\\"color: var(--shiki-color-text)\\">) &#123;</span>
+    </span>
+    <span data-line-number=\\"3\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-constant)\\">console</span>
+      <span style=\\"color: var(--shiki-token-function)\\">.log</span>
+      <span style=\\"color: var(--shiki-color-text)\\">(</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&#96;Hello </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">$&#123;</span>
+      <span style=\\"color: var(--shiki-color-text)\\">value</span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">&#125;</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&#96;</span>
+      <span style=\\"color: var(--shiki-color-text)\\">);</span>
+    </span>
+    <span data-line-number=\\"4\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> &#125; </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">else</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> &#123;</span>
+    </span>
+    <span data-line-number=\\"5\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">throw</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-keyword)\\">new</span>
+      <span style=\\"color: var(--shiki-color-text)\\"> </span>
+      <span style=\\"color: var(--shiki-token-function)\\">Error</span>
+      <span style=\\"color: var(--shiki-color-text)\\">(</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">
+        &#96;Can not greet &#39;undefined&#39;!&#96;
+      </span>
+      <span style=\\"color: var(--shiki-color-text)\\">);</span>
+    </span>
+    <span data-line-number=\\"6\\">
+      <span style=\\"color: var(--shiki-color-text)\\"> &#125;</span>
+    </span>
+    <span data-line-number=\\"7\\">
+      <span style=\\"color: var(--shiki-color-text)\\">&#125;</span>
+    </span>
+    <span data-line-number=\\"8\\"></span>
+    <span data-line-number=\\"9\\">
+      <span style=\\"color: var(--shiki-token-function)\\">hello</span>
+      <span style=\\"color: var(--shiki-color-text)\\">(</span>
+      <span style=\\"color: var(--shiki-token-string-expression)\\">&quot;world!&quot;</span>
+      <span style=\\"color: var(--shiki-color-text)\\">);</span>
+    </span>
+    <span data-line-number=\\"10\\"></span>
+  </code>
+</pre>;
+"
+`;

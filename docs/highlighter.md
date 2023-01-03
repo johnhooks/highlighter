@@ -10,21 +10,21 @@
 |  --- | --- |
 |  [createHighlighter(options)](./highlighter.createhighlighter.md) | Create MDsveX code highlighting function. |
 |  [parseMetadata(metastring)](./highlighter.parsemetadata.md) | Parse Markdown code fence metadata. |
-|  [renderToHast({ metadata, options, tokens, })](./highlighter.rendertohast.md) | Render Shiki tokens to hast, Hypertext Abstract Syntax Tree format. |
+|  [renderToHast({ tokens: lines, options, metadata, })](./highlighter.rendertohast.md) | Render Shiki tokens to hast, Hypertext Abstract Syntax Tree format. |
 
 ## Interfaces
 
 |  Interface | Description |
 |  --- | --- |
-|  [IHastRendererOptions](./highlighter.ihastrendereroptions.md) | å |
-|  [ILineOption](./highlighter.ilineoption.md) | Optional [IHastRendererOptions](./highlighter.ihastrendereroptions.md) property, allows inclusion of classes for specific line numbers. |
-|  [IRenderOptions](./highlighter.irenderoptions.md) | Options to modify the syntax tree of the hast code block. |
-|  [IRenderToHastParams](./highlighter.irendertohastparams.md) |  |
+|  [TRenderToHastParams](./highlighter.trendertohastparams.md) |  |
 
 ## Type Aliases
 
 |  Type Alias | Description |
 |  --- | --- |
 |  [MdvexHighlighter](./highlighter.mdvexhighlighter.md) | <p>MDsveX highlighter type.</p><p>NOTE: not exported from <code>mdsvex</code>, so its copied here.</p> |
-|  [Metadata](./highlighter.metadata.md) | Markdown Code Block Metadata |
+|  [THastRendererOptions](./highlighter.thastrendereroptions.md) | Hast render options, slimmed down compared to Shiki . |
+|  [TLineOption](./highlighter.tlineoption.md) | To help add classes to specific line numbers. |
+|  [TMetadata](./highlighter.tmetadata.md) | Markdown Code Block Metadata |
+|  [TRenderOptions](./highlighter.trenderoptions.md) | Options to modify the rendered HTML output. |
 

@@ -1,6 +1,6 @@
 import rangeParser from "parse-numeric-range";
 
-import { Metadata } from "./types.js";
+import { TMetadata } from "./types.js";
 
 /**
  * Parse Markdown code fence metadata.
@@ -9,7 +9,7 @@ import { Metadata } from "./types.js";
  * @returns Parsed metadata values object.
  * @public
  */
-export function parseMetadata(metastring: string | undefined): Metadata {
+export function parseMetadata(metastring: string | undefined): TMetadata {
   if (metastring === undefined) {
     return { lineNumbers: [], lineNumbersStart: 1, showLineNumbers: false };
   }

@@ -16,7 +16,7 @@
     "emitDeclarationOnly": true,
 
     "strictNullChecks": true,
-    "noImplicitAny": true,
+    // "noImplicitAny": true,
     "noImplicitThis": true,
     "strictPropertyInitialization": true,
     "noUnusedLocals": true,

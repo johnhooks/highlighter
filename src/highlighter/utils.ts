@@ -22,37 +22,19 @@ export function groupBy<TElement, TKey>(
 }
 
 const htmlEscapes = {
-  // "&": "&amp;",
-  // "<": "&lt;",
-  // ">": "&gt;",
-  // '"': "&quot;",
-  // "'": "&#39;",
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': "&quot;",
+  "'": "&#39;",
   // Svelty escapes
   "{": "&#123;",
   "}": "&#125;",
   "`": "&#96;",
 };
 
-/**
- * Escape HTML syntax characters in code blocks.
- *
- * Expands the escape function of `shiki/src/renderer.ts`, adds escapes for Svelty documents (aka MDSveX)
- *
- * Svelty escape curlies, backtick, \t, \r, \n to avoid breaking output of {@html `here`} in .svelte
- * @see {@link https://github.com/pngwn/MDsveX/blob/6c60fe68c335fce559db9690fbf5e69ef539d37d/packages/mdsvex/src/transformers/index.ts#L571 | MDsveX transformers}
- */
 export function escapeHtml(html: string) {
-  const chars = [...html];
-  const escaped = [];
-
-  for (const char of chars) {
-    const escape = htmlEscapes[char as keyof typeof htmlEscapes];
-    if (escape) {
-      escaped.push(escape);
-    } else {
-      escaped.push(char);
-    }
-  }
-
-  return escaped.join("").replace(/\\([trn])/g, "&#92;$1");
+  return html
+    .replace(/[&<>"'{}`]/g, (chr) => htmlEscapes[chr as keyof typeof htmlEscapes])
+    .replace(/\\([trn])/g, "&#92;$1");
 }

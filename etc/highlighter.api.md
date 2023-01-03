@@ -4,57 +4,38 @@
 
 ```ts
 
-import type { HChild } from 'hastscript/lib/core.js';
 import { HighlighterOptions } from 'shiki';
-import type { HPropertyValue } from 'hastscript/lib/core.js';
-import type { HResult } from 'hastscript/lib/core.js';
-import type { HStyle } from 'hastscript/lib/core.js';
-import type { IThemedToken } from 'shiki';
-import type { Root } from 'hast';
+import { IThemedToken } from 'shiki';
 
 // @public
 export function createHighlighter(options: HighlighterOptions): Promise<MdvexHighlighter>;
 
 // @public
-export interface IHastRendererOptions {
-    bg?: string;
-    elements?: Partial<IRenderOptions>;
-    fg?: string;
-    langId?: string;
-    lineOptions?: ILineOption[];
-    themeName?: string;
-}
-
-// @public
-export interface ILineOption {
-    className?: HPropertyValue;
-    line: number;
-}
-
-// @public
-export interface IRenderOptions {
-    // Warning: (ae-forgotten-export) The symbol "ICodeRenderProps" needs to be exported by the entry point index.d.ts
-    readonly code: (props: ICodeRenderProps) => HResult;
-    // Warning: (ae-forgotten-export) The symbol "ILineRenderProps" needs to be exported by the entry point index.d.ts
-    readonly line: (props: ILineRenderProps) => HResult;
-    // Warning: (ae-forgotten-export) The symbol "IPreRenderProps" needs to be exported by the entry point index.d.ts
-    readonly pre: (props: IPreRenderProps) => HResult;
-    // Warning: (ae-forgotten-export) The symbol "ITokenRenderProps" needs to be exported by the entry point index.d.ts
-    readonly token: (props: ITokenRenderProps) => HResult;
-}
-
-// @public (undocumented)
-export interface IRenderToHastParams {
-    metadata?: Metadata;
-    options?: IHastRendererOptions;
-    tokens: IThemedToken[][];
-}
-
-// @public
 export type MdvexHighlighter = (code: string, lang: string | undefined, metastring?: string | undefined) => string | Promise<string>;
 
 // @public
-export type Metadata = {
+export function parseMetadata(metastring: string | undefined): TMetadata;
+
+// Warning: (ae-forgotten-export) The symbol "TElement" needs to be exported by the entry point index.d.ts
+//
+// @public
+export function renderToHast({ tokens: lines, options, metadata, }: TRenderToHastParams): TElement;
+
+// @public
+export type THastRendererOptions = {
+    fg?: string;
+    elements?: Partial<TRenderOptions>;
+    themeName?: string;
+};
+
+// @public
+export type TLineOption = {
+    line: number;
+    className?: string | string[];
+};
+
+// @public
+export type TMetadata = {
     lineNumbers: number[];
     lineNumbersStart: number;
     showLineNumbers: boolean;
@@ -63,10 +44,26 @@ export type Metadata = {
 };
 
 // @public
-export function parseMetadata(metastring: string | undefined): Metadata;
+export type TRenderOptions = {
+    readonly pre: (props: TPreProps) => TElement;
+    readonly code: (props: TCodeProps) => TElement;
+    readonly line: (props: TLineProps) => TElement;
+    readonly token: (props: TTokenProps) => TElement;
+};
 
-// @public
-export function renderToHast({ metadata, options, tokens, }: IRenderToHastParams): Root;
+// @public (undocumented)
+export interface TRenderToHastParams {
+    metadata?: TMetadata;
+    options?: THastRendererOptions;
+    tokens: IThemedToken[][];
+}
+
+// Warnings were encountered during analysis:
+//
+// src/highlighter/types.ts:155:3 - (ae-forgotten-export) The symbol "TPreProps" needs to be exported by the entry point index.d.ts
+// src/highlighter/types.ts:159:3 - (ae-forgotten-export) The symbol "TCodeProps" needs to be exported by the entry point index.d.ts
+// src/highlighter/types.ts:164:3 - (ae-forgotten-export) The symbol "TLineProps" needs to be exported by the entry point index.d.ts
+// src/highlighter/types.ts:169:3 - (ae-forgotten-export) The symbol "TTokenProps" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 

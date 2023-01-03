@@ -9,18 +9,18 @@ Render Shiki tokens to hast, Hypertext Abstract Syntax Tree format.
 <b>Signature:</b>
 
 ```typescript
-export declare function renderToHast({ metadata, options, tokens, }: IRenderToHastParams): Root;
+export declare function renderToHast({ tokens: lines, options, metadata, }: TRenderToHastParams): TElement;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  { metadata, options, tokens, } | [IRenderToHastParams](./highlighter.irendertohastparams.md) |  |
+|  { tokens: lines, options, metadata, } | [TRenderToHastParams](./highlighter.trendertohastparams.md) |  |
 
 <b>Returns:</b>
 
-Root
+TElement
 
 A hast syntax tree for a highlighted code block.
 
