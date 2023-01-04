@@ -29,3 +29,10 @@ export type TMetadata = {
    */
   lang?: string | undefined;
 };
+
+export type TMetaToken = {
+  value: string;
+  start: number;
+  end: number;
+  type: "identifier" | "literal" | "symbol";
+};
