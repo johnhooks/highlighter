@@ -366,3 +366,17 @@ exports[`createHighlighter > should render fixture: fixture.ts 1`] = `
 </pre>;
 "
 `;
+
+exports[`createHighlighter > should render fixture: fixture.txt 1`] = `
+"<pre>
+  <code>
+    <span data-line-number=\\"1\\">
+      <span>Hello World</span>
+    </span>
+    <span data-line-number=\\"2\\">
+      <span></span>
+    </span>
+  </code>
+</pre>;
+"
+`;

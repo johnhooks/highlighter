@@ -121,10 +121,8 @@ type TLineProps = TRenderProps & {
 type TTokenProps = TRenderProps & {
   /**
    * Styles applied to the token by Shiki.
-   *
-   * Should be included in the {@link hastscript#h | h} {@link hastscript#Properties | props} argument.
    */
-  style: string;
+  style: string | undefined;
 
   /**
    * An array of the entire line of tokens.

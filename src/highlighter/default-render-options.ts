@@ -17,7 +17,7 @@ export const defaultRenderOptions: TRenderOptions = {
 
   line({ children, index, metadata: { lineNumbers, lineNumbersStart } }) {
     const dataLineNumber = String(index + lineNumbersStart);
-    const dataHighlighted = lineNumbers?.includes(index);
+    const dataHighlighted = lineNumbers?.includes(index + 1);
     return h("span", { dataHighlighted, dataLineNumber }, children);
   },
 

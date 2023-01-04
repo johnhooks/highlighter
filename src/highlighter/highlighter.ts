@@ -4,7 +4,6 @@ import { parseMetadata } from "../parse-metadata/index.js";
 
 import { toHtml } from "./hast-utils.js";
 import { renderToHast } from "./render-to-hast.js";
-import { escapeHtml } from "./utils.js";
 
 /**
  * MDsveX highlighter type.
@@ -41,7 +40,6 @@ export async function createHighlighter(options: HighlighterOptions): Promise<Md
     lang: string | undefined,
     metastring?: string | undefined
   ): string {
-    if (!lang) return `<pre><code>${escapeHtml(code)}</code></pre>`;
     const tokens = shikiHighlighter.codeToThemedTokens(code, lang || "txt");
     const metadata = parseMetadata(metastring);
     const tree = renderToHast({ tokens, metadata });

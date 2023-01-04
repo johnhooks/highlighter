@@ -3260,3 +3260,71 @@ exports[`renderToHast > should render fixture: fixture.ts 1`] = `
   "type": "element",
 }
 `;
+
+exports[`renderToHast > should render fixture: fixture.txt 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Hello World",
+                },
+              ],
+              "properties": {
+                "style": undefined,
+              },
+              "tagName": "span",
+              "type": "element",
+            },
+          ],
+          "properties": {
+            "dataHighlighted": false,
+            "dataLineNumber": "1",
+          },
+          "tagName": "span",
+          "type": "element",
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "type": "text",
+                  "value": "",
+                },
+              ],
+              "properties": {
+                "style": undefined,
+              },
+              "tagName": "span",
+              "type": "element",
+            },
+          ],
+          "properties": {
+            "dataHighlighted": false,
+            "dataLineNumber": "2",
+          },
+          "tagName": "span",
+          "type": "element",
+        },
+      ],
+      "properties": {
+        "dataLanguage": undefined,
+        "dataLineNumbers": false,
+      },
+      "tagName": "code",
+      "type": "element",
+    },
+  ],
+  "properties": {
+    "dataCodeTitle": undefined,
+  },
+  "tagName": "pre",
+  "type": "element",
+}
+`;

@@ -28,7 +28,11 @@ export function renderToHast({
             index,
             metadata,
             children: tokens.map((shikiToken, index) => {
-              const cssDeclarations = [`color: ${shikiToken.color || options.fg}`];
+              const cssDeclarations: string[] = [];
+
+              if (shikiToken.color) {
+                cssDeclarations.push(`color: ${shikiToken.color}`);
+              }
 
               if (shikiToken.fontStyle) {
                 if (shikiToken.fontStyle & FontStyle.Italic) {
@@ -43,9 +47,10 @@ export function renderToHast({
               }
 
               const children = [shikiToken.content];
+              const style = cssDeclarations.length > 0 ? cssDeclarations.join("; ") : undefined;
 
               return token({
-                style: cssDeclarations.join("; "),
+                style,
                 token: shikiToken,
                 tokens,
                 index,
