@@ -2,7 +2,7 @@
   "extends": "./tsconfig.base",
   "files": ["./index.ts"],
   "compilerOptions": {
-    "emitDeclarationOnly": false,
+    "emitDeclarationOnly": false
   },
   "references": [{ "path": "./highlighter" }, { "path": "./parse-metadata" }]
 }

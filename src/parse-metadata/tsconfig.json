@@ -6,8 +6,7 @@
     "emitDeclarationOnly": false
   },
 
-  "references": [
-  ],
+  "references": [],
 
   "include": ["**/*"]
 }

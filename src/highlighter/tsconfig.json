@@ -7,9 +7,7 @@
     "emitDeclarationOnly": false
   },
 
-  "references": [
-    { "path": "../parse-metadata" }
-  ],
+  "references": [{ "path": "../parse-metadata" }],
 
   "include": ["**/*"]
 }
