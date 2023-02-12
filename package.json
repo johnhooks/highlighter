@@ -1,6 +1,6 @@
 {
   "name": "@bitmachina/highlighter",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "type": "module",
   "description": "Highlight MDsveX files with the Shiki highlighter",
   "keywords": [
