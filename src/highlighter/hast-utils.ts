@@ -62,10 +62,11 @@ function renderNode(node: TNode) {
   if (node.type === "text") {
     return renderText(node);
   } else {
+    const line = "dataLineNumber" in node.properties;
     const attributes = renderAttributes(node.properties);
     const children = node.children.map(renderNode).join("");
     const opening = node.tagName + (attributes.length > 1 ? " " + attributes : "");
-    return `<${opening}>${children}</${node.tagName}>`;
+    return `<${opening}>${children}</${node.tagName}>${line ? "\n" : ""}`;
   }
 }
 
