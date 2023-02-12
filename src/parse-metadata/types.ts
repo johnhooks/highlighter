@@ -30,6 +30,9 @@ export type TMetadata = {
   lang?: string | undefined;
 };
 
+/**
+ * @public
+ */
 export type TMetaToken = {
   value: string;
   start: number;

@@ -36,13 +36,7 @@
   "typescript.autoClosingTags": false,
   "typescript.suggest.completeJSDocs": false,
   "typescript.disableAutomaticTypeAcquisition": true,
-  "cSpell.words": [
-    "dev",
-    "hastscript",
-    "mdsvex",
-    "rehype",
-    "shiki"
-  ],
+  "cSpell.words": ["dev", "hastscript", "mdsvex", "rehype", "shiki"],
   "cSpell.ignorePaths": [
     "**/package-lock.json",
     "**/.svelte-kit/**",
