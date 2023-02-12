@@ -24,6 +24,14 @@ export type TMetadata = {
     lang?: string | undefined;
 };
 
+// @public (undocumented)
+export type TMetaToken = {
+    value: string;
+    start: number;
+    end: number;
+    type: "identifier" | "literal" | "symbol";
+};
+
 // (No @packageDocumentation comment for this package)
 
 ```

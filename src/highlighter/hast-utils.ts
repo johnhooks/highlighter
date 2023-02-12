@@ -62,11 +62,12 @@ function renderNode(node: TNode) {
   if (node.type === "text") {
     return renderText(node);
   } else {
-    const line = "dataLineNumber" in node.properties;
+    // This is pretty hacky, but it works for now.
+    const newline = "dataLineNumber" in node.properties ? "\n" : "";
     const attributes = renderAttributes(node.properties);
     const children = node.children.map(renderNode).join("");
     const opening = node.tagName + (attributes.length > 1 ? " " + attributes : "");
-    return `<${opening}>${children}</${node.tagName}>${line ? "\n" : ""}`;
+    return `<${opening}>${children}</${node.tagName}>${newline}`;
   }
 }
 
