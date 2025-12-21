@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`lexer > snapshots > should lex a \`showLineNumbers \`identifier 1`] = `
 [
@@ -63,7 +63,7 @@ exports[`lexer > snapshots > should lex a double quote pair 1`] = `
     "end": 1,
     "start": 0,
     "type": "symbol",
-    "value": "\\"",
+    "value": """,
   },
   {
     "end": 7,
@@ -75,7 +75,7 @@ exports[`lexer > snapshots > should lex a double quote pair 1`] = `
     "end": 8,
     "start": 7,
     "type": "symbol",
-    "value": "\\"",
+    "value": """,
   },
 ]
 `;
@@ -207,7 +207,7 @@ exports[`lexer > snapshots > should lex a title 1`] = `
     "end": 7,
     "start": 6,
     "type": "symbol",
-    "value": "\\"",
+    "value": """,
   },
   {
     "end": 18,
@@ -219,7 +219,7 @@ exports[`lexer > snapshots > should lex a title 1`] = `
     "end": 19,
     "start": 18,
     "type": "symbol",
-    "value": "\\"",
+    "value": """,
   },
 ]
 `;

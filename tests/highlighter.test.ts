@@ -1,3 +1,6 @@
+/**
+ * @vitest-environment jsdom
+ */
 import { vi } from "vitest";
 
 import { createHighlighter } from "../src/highlighter/highlighter.js";
@@ -22,8 +25,8 @@ describe("highlighter", () => {
 
         it("should start at the right line number", () => {
           const line = document.querySelector("span[data-line-number]");
-          expect(line).toBeVisible();
-          expect(line.getAttribute("data-line-number")).toEqual("1");
+          expect(line).toBeTruthy();
+          expect(line?.getAttribute("data-line-number")).toEqual("1");
         });
       });
 
@@ -41,8 +44,8 @@ describe("highlighter", () => {
 
         it("should start at the right line number", () => {
           const line = document.querySelector("span[data-line-number]");
-          expect(line).toBeVisible();
-          expect(line.getAttribute("data-line-number")).toEqual("10");
+          expect(line).toBeTruthy();
+          expect(line?.getAttribute("data-line-number")).toEqual("10");
         });
       });
     });
@@ -54,21 +57,24 @@ describe("highlighter", () => {
     it("should highlight a single line", async () => {
       const lines = await injectThenQueryLines(code, "js", "js highlight{2}");
       lines.forEach((line, index) => {
-        expect(line.getAttribute("data-highlighted")).toBe(index === 1);
+        const isHighlighted = line.hasAttribute("data-highlighted");
+        expect(isHighlighted).toBe(index === 1);
       });
     });
 
     it("should highlight a range of lines", async () => {
       const lines = await injectThenQueryLines(code, "js", "js highlight{2-4}");
       lines.forEach((line, index) => {
-        expect(line.getAttribute("data-highlighted")).toBe([1, 2, 3].includes(index));
+        const isHighlighted = line.hasAttribute("data-highlighted");
+        expect(isHighlighted).toBe([1, 2, 3].includes(index));
       });
     });
 
     it("should highlight a single line and a range of lines", async () => {
       const lines = await injectThenQueryLines(code, "js", "js highlight{2-4,6}");
       lines.forEach((line, index) => {
-        expect(line.getAttribute("data-highlighted")).toBe([1, 2, 3, 5].includes(index));
+        const isHighlighted = line.hasAttribute("data-highlighted");
+        expect(isHighlighted).toBe([1, 2, 3, 5].includes(index));
       });
     });
 
@@ -76,7 +82,8 @@ describe("highlighter", () => {
       it("should not throw error and ignore negative range", async () => {
         const lines = await injectThenQueryLines(code, "js", "js highlight{-4..-1}");
         lines.forEach((line) => {
-          expect(line.getAttribute("data-highlighted")).toBe(false);
+          const isHighlighted = line.hasAttribute("data-highlighted");
+          expect(isHighlighted).toBe(false);
         });
       });
     });
@@ -86,5 +93,5 @@ describe("highlighter", () => {
 async function injectThenQueryLines(code: string, lang: string, metadata: string) {
   const html = await highlighter(code, lang, metadata);
   document.body.innerHTML = html;
-  return document.querySelectorAll("span[data-line-numbers]");
+  return document.querySelectorAll("span[data-line-number]");
 }
