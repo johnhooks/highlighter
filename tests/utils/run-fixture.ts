@@ -17,12 +17,12 @@ const prettierOptions = {
 // To add a test, create a source code file in the fixtures folder
 export async function runHastFixture(fixture, lang, tokenizer) {
   const code = await readFile(fixture, "utf8");
-  const tokens = tokenizer(code, lang);
+  const tokens = await tokenizer(code, lang);
   return renderToHast({ tokens });
 }
 
 export async function runHighlighterFixture(fixture, lang, highlighter) {
   const raw = await readFile(fixture, "utf8");
-  const code = highlighter(raw, lang);
+  const code = await highlighter(raw, lang);
   return format(code, prettierOptions);
 }

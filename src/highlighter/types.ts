@@ -1,4 +1,4 @@
-import { IThemedToken } from "shiki";
+import type { ThemedToken } from "shiki";
 
 import type { TMetadata } from "../parse-metadata/types.js";
 
@@ -21,7 +21,7 @@ export interface TRenderToHastParams {
   /**
    * Shiki highlighted tokens to render.
    */
-  tokens: IThemedToken[][];
+  tokens: ThemedToken[][];
 }
 
 /**
@@ -127,12 +127,12 @@ type TTokenProps = TRenderProps & {
   /**
    * An array of the entire line of tokens.
    */
-  tokens: IThemedToken[];
+  tokens: ThemedToken[];
 
   /**
-   * The Shiki {@link shiki#IThemedToken| token} to render.
+   * The Shiki {@link shiki#ThemedToken| token} to render.
    */
-  token: IThemedToken;
+  token: ThemedToken;
 
   /**
    * Zero-based index of the token position in the line.

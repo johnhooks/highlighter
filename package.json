@@ -48,11 +48,15 @@
     "parse-numeric-range": "1.3.0",
     "property-information": "6.2.0",
     "rehype-parse": "8.0.4",
-    "shiki": "0.11.1",
     "unified": "10.1.2",
     "unist-util-visit": "4.1.1"
   },
+  "peerDependencies": {
+    "shiki": "^3.0.0"
+  },
   "devDependencies": {
+    "@shikijs/vscode-textmate": "^10.0.0",
+    "shiki": "^3.0.0",
     "@testing-library/dom": "8.19.1",
     "@testing-library/jest-dom": "5.16.5",
     "@types/hast": "2.3.4",

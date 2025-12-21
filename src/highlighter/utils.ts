@@ -38,3 +38,9 @@ export function escapeHtml(html: string) {
     .replace(/[&<>"'{}`]/g, (chr) => htmlEscapes[chr as keyof typeof htmlEscapes])
     .replace(/\\([trn])/g, "&#92;$1");
 }
+
+/**
+ * Escape HTML for safe use in Svelte templates.
+ * Alias for escapeHtml that makes the intent clearer.
+ */
+export const escapeSvelte = escapeHtml;
