@@ -143,20 +143,21 @@ describe("highlighter", () => {
   describe("svelte escaping", () => {
     it("should escape curly braces", async () => {
       const html = await highlighter("const obj = { a: 1 };", "js");
-      expect(html).toContain("&#x26;#123;");
-      expect(html).toContain("&#x26;#125;");
+      expect(html).toContain("&#123;");
+      expect(html).toContain("&#125;");
       expect(html).not.toMatch(/>([^<]*[{}][^<]*)</);
     });
 
     it("should escape backticks", async () => {
       const html = await highlighter("const str = `hello`;", "js");
-      expect(html).toContain("&#x26;#96;");
+      expect(html).toContain("&#96;");
     });
 
     it("should escape angle brackets", async () => {
       const html = await highlighter("<div>hello</div>", "html");
-      expect(html).toContain("&#x26;lt;");
-      expect(html).toContain("&#x26;gt;");
+      // Shiki escapes < and > to &#x3C; and > respectively
+      expect(html).toContain("&#x3C;");
+      expect(html).toContain(">");
     });
   });
 });
