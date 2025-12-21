@@ -13,13 +13,13 @@ export function parseMetadata(metastring: string | undefined): TMetadata {
   if (metastring === undefined) {
     return { lineNumbers: [], lineNumbersStart: 1, showLineNumbers: false };
   }
-  const titleMatch = metastring?.match(/title="(.+)"/);
-  const title = titleMatch?.[1] ?? undefined;
+  const titleMatch = metastring.match(/title="(.+)"/);
+  const title = titleMatch?.[1];
   // full title string `title="..."`
   const titleString = titleMatch?.[0] ?? "";
-  const metaWithoutTitle = metastring?.replace(titleString, "");
+  const metaWithoutTitle = metastring.replace(titleString, "");
 
-  const lineNumbers = metastring ? rangeParser(metaWithoutTitle.match(/{(.*)}/)?.[1] ?? "") : [];
+  const lineNumbers = rangeParser(metaWithoutTitle.match(/{(.*)}/)?.[1] ?? "");
 
   const showLineNumbers = /srebmuNeniLwohs(?!(.*)(\/))/.test(reverseString(metastring));
 

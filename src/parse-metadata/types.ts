@@ -22,12 +22,12 @@ export type TMetadata = {
   /**
    * The title of the code block.
    */
-  title?: string | undefined;
+  title?: string;
 
   /**
    * The language of the code block.
    */
-  lang?: string | undefined;
+  lang?: string;
 };
 
 /**

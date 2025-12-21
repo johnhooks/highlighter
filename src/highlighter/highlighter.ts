@@ -1,6 +1,5 @@
 import {
   createHighlighter as createShikiHighlighter,
-  type HighlighterGeneric,
   type BundledLanguage,
   type BundledTheme,
   type ShikiTransformer,
@@ -11,6 +10,8 @@ import {
 import { parseMetadata } from "../parse-metadata/index.js";
 
 import { escapeSvelte } from "./utils.js";
+
+type ThemeInput = BundledTheme | ThemeRegistration | ThemeRegistrationRaw;
 
 /**
  * MDsveX highlighter type.
@@ -23,8 +24,6 @@ export type MdsvexHighlighter = (
   lang: string | undefined,
   metastring?: string | undefined
 ) => string | Promise<string>;
-
-type ThemeInput = BundledTheme | ThemeRegistration | ThemeRegistrationRaw;
 
 /**
  * Options for creating a highlighter with a single theme.
@@ -81,11 +80,10 @@ export async function createHighlighter(options: HighlighterOptions): Promise<Md
     ? [options.themes.light, options.themes.dark]
     : [options.theme];
 
-  const shikiHighlighter: HighlighterGeneric<BundledLanguage, BundledTheme> =
-    await createShikiHighlighter({
-      themes: themesToLoad as BundledTheme[],
-      langs,
-    });
+  const shikiHighlighter = await createShikiHighlighter({
+    themes: themesToLoad,
+    langs,
+  });
 
   /**
    * Highlighter function for Mdsvex codeblocks.
@@ -102,9 +100,11 @@ export async function createHighlighter(options: HighlighterOptions): Promise<Md
   ): Promise<string> {
     const language = lang || "text";
 
-    // Load language on demand if not already loaded
+    // Load language on demand if not already loaded.
+    // Note: language comes from markdown files as an arbitrary string.
+    // Shiki throws at runtime if the language is not supported.
     const loadedLangs = shikiHighlighter.getLoadedLanguages();
-    if (!loadedLangs.includes(language as BundledLanguage)) {
+    if (!loadedLangs.includes(language)) {
       await shikiHighlighter.loadLanguage(language as BundledLanguage);
     }
 
@@ -146,6 +146,7 @@ export async function createHighlighter(options: HighlighterOptions): Promise<Md
     ];
 
     // Generate HTML with appropriate theme config
+    // TODO: Replace `as` assertions with proper type guards
     if (isDualTheme) {
       return shikiHighlighter.codeToHtml(code, {
         lang: language,
