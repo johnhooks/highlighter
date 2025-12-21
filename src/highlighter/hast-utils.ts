@@ -58,7 +58,7 @@ function renderAttributes(attributes: TProperties): string {
   return result.join(" ");
 }
 
-function renderNode(node: TNode) {
+function renderNode(node: TNode): string {
   if (node.type === "text") {
     return renderText(node);
   } else {

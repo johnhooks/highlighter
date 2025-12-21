@@ -1,22 +1,8 @@
 {
+  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "rootDir": "../",
-    "outDir": "./build",
-
-    "target": "esnext",
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
-    "jsx": "react-jsx",
-    "jsxImportSource": "hastscript",
-
-    "strict": false,
     "noEmit": true,
-
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-
     "types": ["vitest/globals", "@testing-library/dom", "@testing-library/jest-dom"]
   },
-  "include": ["**/*", "../src"],
-  "references": [{ "path": "../src/highlighter" }, { "path": "../src/parse-metadata" }]
+  "include": ["**/*", "../src"]
 }
