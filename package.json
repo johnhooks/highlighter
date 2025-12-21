@@ -22,29 +22,26 @@
   },
   "license": "MIT",
   "sideEffects": false,
-  "main": "dist/esm/highlighter/index.js",
-  "module": "dist/esm/highlighter/index.js",
-  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
     "dist/"
   ],
   "scripts": {
-    "clean": "rimraf ./{dist,temp}",
-    "clean:tsc": "rimraf ./build",
-    "clean:all": "pnpm clean && pnpm clean:tsc",
-    "build:all": "pnpm build && pnpm generate:docs",
-    "build:esm": "./scripts/esm.sh",
-    "build:tsc": "tsc --build ./src",
-    "build:types": "./scripts/build-types.sh",
-    "build:umd:cjs": "rollup --config",
-    "build": "./scripts/build-pkg.sh",
-    "check": "tsc --build ./src && tsc --project ./tests",
-    "generate:docs": "./scripts/build-docs.sh",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
     "lint": "eslint --ext .js,.ts .",
-    "prepare": "husky install",
-    "release": "shipjs prepare",
-    "test": "vitest run"
+    "check": "tsc --noEmit",
+    "clean": "rimraf dist",
+    "prepare": "husky install"
   },
   "dependencies": {
     "hast-util-to-string": "2.0.0",
@@ -56,13 +53,6 @@
     "unist-util-visit": "4.1.1"
   },
   "devDependencies": {
-    "@microsoft/api-documenter": "7.19.27",
-    "@microsoft/api-extractor": "7.33.7",
-    "@rollup/plugin-json": "6.0.0",
-    "@rollup/plugin-node-resolve": "15.0.1",
-    "@rollup/plugin-replace": "5.0.2",
-    "@rollup/plugin-sucrase": "5.0.1",
-    "@rollup/plugin-terser": "0.2.1",
     "@testing-library/dom": "8.19.1",
     "@testing-library/jest-dom": "5.16.5",
     "@types/hast": "2.3.4",
@@ -80,10 +70,7 @@
     "jsdom": "20.0.3",
     "lint-staged": "13.1.0",
     "prettier": "2.8.1",
-    "rollup-plugin-filesize": "9.1.2",
-    "shipjs": "0.25.1",
-    "ts-node": "10.9.1",
-    "tslib": "2.4.1",
+    "tsup": "^8.0.0",
     "typescript": "4.9.4",
     "vite": "4.0.3",
     "vitest": "0.25.8"
