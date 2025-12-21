@@ -5,10 +5,38 @@ import { vi } from "vitest";
 
 import { createHighlighter } from "../src/highlighter/highlighter.js";
 
-const bitmachinaHighlighter = await createHighlighter({ theme: "github-dark" });
-const highlighter = vi.fn(bitmachinaHighlighter);
+const singleThemeHighlighter = await createHighlighter({ theme: "github-dark" });
+const dualThemeHighlighter = await createHighlighter({
+  themes: { light: "github-light", dark: "github-dark" },
+});
+
+const highlighter = vi.fn(singleThemeHighlighter);
 
 describe("highlighter", () => {
+  describe("theme modes", () => {
+    it("should work with single theme", async () => {
+      const html = await singleThemeHighlighter("const x = 1;", "js");
+      expect(html).toContain('class="shiki github-dark"');
+      expect(html).toContain("background-color:");
+    });
+
+    it("should work with dual themes", async () => {
+      const html = await dualThemeHighlighter("const x = 1;", "js");
+      expect(html).toContain('class="shiki shiki-themes github-light github-dark"');
+      expect(html).toContain("--shiki-dark:");
+      expect(html).toContain("--shiki-dark-bg:");
+    });
+
+    it("should apply transforms with dual themes", async () => {
+      const html = await dualThemeHighlighter("const x = 1;", "js", 'title="test.js"');
+      document.body.innerHTML = html;
+      const pre = document.querySelector("pre");
+      expect(pre?.getAttribute("data-code-title")).toBe("test.js");
+      const code = document.querySelector("code");
+      expect(code?.getAttribute("data-language")).toBe("js");
+    });
+  });
+
   describe("render options", async () => {
     describe("line numbers", async () => {
       beforeEach(async () => {
@@ -86,6 +114,49 @@ describe("highlighter", () => {
           expect(isHighlighted).toBe(false);
         });
       });
+    });
+  });
+
+  describe("metadata", () => {
+    it("should add title to pre element", async () => {
+      const html = await highlighter("const x = 1;", "js", 'title="example.js"');
+      document.body.innerHTML = html;
+      const pre = document.querySelector("pre");
+      expect(pre?.getAttribute("data-code-title")).toBe("example.js");
+    });
+
+    it("should add language to code element", async () => {
+      const html = await highlighter("const x = 1;", "js");
+      document.body.innerHTML = html;
+      const code = document.querySelector("code");
+      expect(code?.getAttribute("data-language")).toBe("js");
+    });
+
+    it("should add data-line-numbers attribute when showLineNumbers is set", async () => {
+      const html = await highlighter("const x = 1;", "js", "showLineNumbers");
+      document.body.innerHTML = html;
+      const code = document.querySelector("code");
+      expect(code?.hasAttribute("data-line-numbers")).toBe(true);
+    });
+  });
+
+  describe("svelte escaping", () => {
+    it("should escape curly braces", async () => {
+      const html = await highlighter("const obj = { a: 1 };", "js");
+      expect(html).toContain("&#x26;#123;");
+      expect(html).toContain("&#x26;#125;");
+      expect(html).not.toMatch(/>([^<]*[{}][^<]*)</);
+    });
+
+    it("should escape backticks", async () => {
+      const html = await highlighter("const str = `hello`;", "js");
+      expect(html).toContain("&#x26;#96;");
+    });
+
+    it("should escape angle brackets", async () => {
+      const html = await highlighter("<div>hello</div>", "html");
+      expect(html).toContain("&#x26;lt;");
+      expect(html).toContain("&#x26;gt;");
     });
   });
 });
