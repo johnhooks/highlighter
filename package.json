@@ -32,8 +32,8 @@
   "scripts": {
     "clean": "rimraf ./{dist,temp}",
     "clean:tsc": "rimraf ./build",
-    "clean:all": "yarn clean && yarn clean:tsc",
-    "build:all": "yarn build && yarn generate:docs",
+    "clean:all": "pnpm clean && pnpm clean:tsc",
+    "build:all": "pnpm build && pnpm generate:docs",
     "build:esm": "./scripts/esm.sh",
     "build:tsc": "tsc --build ./src",
     "build:types": "./scripts/build-types.sh",
