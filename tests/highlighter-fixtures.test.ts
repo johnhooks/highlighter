@@ -13,7 +13,7 @@ const __dirname = dirname(__filename);
 
 const fixturesFolder = join(__dirname, "fixtures");
 
-const bitmachinaHighlighter = await createHighlighter({ theme: "css-variables" });
+const bitmachinaHighlighter = await createHighlighter({ theme: "github-dark" });
 
 describe("createHighlighter", () => {
   const highlighter = vi.fn(bitmachinaHighlighter);

@@ -2,7 +2,7 @@ import { vi } from "vitest";
 
 import { createHighlighter } from "../src/highlighter/highlighter.js";
 
-const bitmachinaHighlighter = await createHighlighter({ theme: "css-variables" });
+const bitmachinaHighlighter = await createHighlighter({ theme: "github-dark" });
 const highlighter = vi.fn(bitmachinaHighlighter);
 
 describe("highlighter", () => {

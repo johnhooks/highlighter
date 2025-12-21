@@ -1,4 +1,4 @@
-import { FontStyle } from "shiki";
+import { FontStyle } from "@shikijs/vscode-textmate";
 
 import { defaultRenderOptions } from "./default-render-options.js";
 import type { TElement } from "./hast-utils.js";
