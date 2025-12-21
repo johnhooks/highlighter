@@ -9,8 +9,8 @@ import { TMetadata } from "./types.js";
  * @returns Parsed metadata values object.
  * @public
  */
-export function parseMetadata(metastring: string | undefined): TMetadata {
-  if (metastring === undefined) {
+export function parseMetadata(metastring: string | undefined | null): TMetadata {
+  if (!metastring) {
     return { lineNumbers: [], lineNumbersStart: 1, showLineNumbers: false };
   }
   const titleMatch = metastring.match(/title="(.+)"/);

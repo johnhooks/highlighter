@@ -9,8 +9,6 @@ import {
 
 import { parseMetadata } from "../parse-metadata/index.js";
 
-import { escapeSvelte } from "./utils.js";
-
 type ThemeInput = BundledTheme | ThemeRegistration | ThemeRegistrationRaw;
 
 /**
@@ -133,14 +131,9 @@ export async function createHighlighter(options: HighlighterOptions): Promise<Md
             node.properties["data-highlighted"] = "";
           }
         },
-        // Escape Svelte special characters in text nodes
-        span(node) {
-          node.children = node.children.map((child) => {
-            if (child.type === "text") {
-              return { ...child, value: escapeSvelte(child.value) };
-            }
-            return child;
-          });
+        // Escape Svelte special characters after HTML serialization
+        postprocess(html) {
+          return html.replace(/\{/g, "&#123;").replace(/\}/g, "&#125;").replace(/`/g, "&#96;");
         },
       },
     ];
