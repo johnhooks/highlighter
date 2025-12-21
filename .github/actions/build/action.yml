@@ -3,47 +3,33 @@ name: Build application
 runs:
   using: "composite"
   steps:
-    - name: Setup Node
-      uses: actions/setup-node@v3
+    - name: Install pnpm
+      uses: pnpm/action-setup@v4
       with:
-        node-version: "16"
+        version: 10
 
-    - name: Install specific Yarn version
-      shell: bash
-      run: |
-        curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.22.19
-        echo 'export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"' >> $GITHUB_PATH
-
-    - name: Get yarn cache directory path
-      id: yarn-cache-dir-path
-      shell: bash
-      run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-
-    - name: Cache node_modules
-      uses: actions/cache@v3
-      id: yarn-cache
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
-        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-        key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-yarn-
+        node-version: "22"
+        cache: "pnpm"
 
-    - name: Install Packages
+    - name: Install dependencies
       shell: bash
-      run: yarn install --frozen-lockfile
+      run: pnpm install --frozen-lockfile
 
-    - name: Build application
+    - name: Build
       shell: bash
-      run: yarn build
+      run: pnpm build
 
-    - name: Test application
+    - name: Test
       shell: bash
-      run: yarn test
+      run: pnpm test
 
-    - name: Lint application
+    - name: Lint
       shell: bash
-      run: yarn lint
+      run: pnpm lint
 
-    - name: Type check application
+    - name: Type check
       shell: bash
-      run: yarn run check
+      run: pnpm check

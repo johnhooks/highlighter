@@ -1,22 +1,20 @@
-name: Run build pipeline
+name: CI
 
 on:
   workflow_dispatch:
   pull_request:
-    types: [opened, synchronize, reopened]
     branches:
-      - "**/*"
-
-env:
-  # Used by scripts/build-types.sh
-  CI: true
+      - main
+  push:
+    branches:
+      - main
 
 jobs:
-  pipeline:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Build application
+      - name: Build and test
         uses: ./.github/actions/build
