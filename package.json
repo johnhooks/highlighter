@@ -10,7 +10,7 @@
     "svelte",
     "markdown"
   ],
-  "homepage": "https://johnhooks/projects/highlighter",
+  "homepage": "https://johnhooks.io/projects/highlighter",
   "bugs": "https://github.com/johnhooks/highlighter/issues",
   "repository": {
     "type": "git",
@@ -40,7 +40,6 @@
     "test": "vitest run",
     "lint": "eslint .",
     "check": "tsc --noEmit",
-    "clean": "rimraf dist",
     "prepare": "husky install"
   },
   "dependencies": {
