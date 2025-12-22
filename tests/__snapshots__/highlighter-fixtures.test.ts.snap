@@ -2,31 +2,31 @@
 
 exports[`createHighlighter > should render fixture: fixture.c 1`] = `
 "<pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code data-language="c"><span class="line" data-line-number="1"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> &#x3C;stdio.h></span></span>
-<span class="line" data-line-number="2"></span>
+<span class="line" data-line-number="2"> </span>
 <span class="line" data-line-number="3"><span style="color:#F97583">int</span><span style="color:#B392F0"> main</span><span style="color:#E1E4E8">()</span></span>
 <span class="line" data-line-number="4"><span style="color:#E1E4E8">&#123;</span></span>
 <span class="line" data-line-number="5"><span style="color:#B392F0">  printf</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"Hello World"</span><span style="color:#E1E4E8">);</span></span>
 <span class="line" data-line-number="6"><span style="color:#F97583">  return</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
 <span class="line" data-line-number="7"><span style="color:#E1E4E8">&#125;</span></span>
-<span class="line" data-line-number="8"></span></code></pre>"
+<span class="line" data-line-number="8"> </span></code></pre>"
 `;
 
 exports[`createHighlighter > should render fixture: fixture.cpp 1`] = `
 "<pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code data-language="cpp"><span class="line" data-line-number="1"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> &#x3C;iostream></span></span>
-<span class="line" data-line-number="2"></span>
+<span class="line" data-line-number="2"> </span>
 <span class="line" data-line-number="3"><span style="color:#F97583">int</span><span style="color:#B392F0"> main</span><span style="color:#E1E4E8">()</span></span>
 <span class="line" data-line-number="4"><span style="color:#E1E4E8">&#123;</span></span>
 <span class="line" data-line-number="5"><span style="color:#B392F0">  std</span><span style="color:#E1E4E8">::cout </span><span style="color:#F97583">&#x3C;&#x3C;</span><span style="color:#9ECBFF"> "Hello World"</span><span style="color:#E1E4E8">;</span></span>
 <span class="line" data-line-number="6"><span style="color:#F97583">  return</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
 <span class="line" data-line-number="7"><span style="color:#E1E4E8">&#125;</span></span>
-<span class="line" data-line-number="8"></span></code></pre>"
+<span class="line" data-line-number="8"> </span></code></pre>"
 `;
 
 exports[`createHighlighter > should render fixture: fixture.css 1`] = `
 "<pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code data-language="css"><span class="line" data-line-number="1"><span style="color:#B392F0">.fixture::after</span><span style="color:#E1E4E8"> &#123;</span></span>
 <span class="line" data-line-number="2"><span style="color:#79B8FF">  content</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"hello world"</span><span style="color:#E1E4E8">;</span></span>
 <span class="line" data-line-number="3"><span style="color:#E1E4E8">&#125;</span></span>
-<span class="line" data-line-number="4"></span></code></pre>"
+<span class="line" data-line-number="4"> </span></code></pre>"
 `;
 
 exports[`createHighlighter > should render fixture: fixture.html 1`] = `
@@ -38,7 +38,7 @@ exports[`createHighlighter > should render fixture: fixture.html 1`] = `
 <span class="line" data-line-number="6"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">>Hello World&#x3C;</span><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">></span></span>
 <span class="line" data-line-number="7"><span style="color:#E1E4E8">  &#x3C;/</span><span style="color:#85E89D">body</span><span style="color:#E1E4E8">></span></span>
 <span class="line" data-line-number="8"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">html</span><span style="color:#E1E4E8">></span></span>
-<span class="line" data-line-number="9"></span></code></pre>"
+<span class="line" data-line-number="9"> </span></code></pre>"
 `;
 
 exports[`createHighlighter > should render fixture: fixture.js 1`] = `
@@ -49,25 +49,25 @@ exports[`createHighlighter > should render fixture: fixture.js 1`] = `
 <span class="line" data-line-number="5"><span style="color:#F97583">    throw</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Error</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#96;Can not greet 'undefined'!&#96;</span><span style="color:#E1E4E8">);</span></span>
 <span class="line" data-line-number="6"><span style="color:#E1E4E8">  &#125;</span></span>
 <span class="line" data-line-number="7"><span style="color:#E1E4E8">&#125;</span></span>
-<span class="line" data-line-number="8"></span>
+<span class="line" data-line-number="8"> </span>
 <span class="line" data-line-number="9"><span style="color:#B392F0">hello</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"world!"</span><span style="color:#E1E4E8">);</span></span>
-<span class="line" data-line-number="10"></span></code></pre>"
+<span class="line" data-line-number="10"> </span></code></pre>"
 `;
 
 exports[`createHighlighter > should render fixture: fixture.rb 1`] = `
 "<pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code data-language="rb"><span class="line" data-line-number="1"><span style="color:#79B8FF">puts</span><span style="color:#9ECBFF"> 'Hello World'</span></span>
-<span class="line" data-line-number="2"></span></code></pre>"
+<span class="line" data-line-number="2"> </span></code></pre>"
 `;
 
 exports[`createHighlighter > should render fixture: fixture.sh 1`] = `
 "<pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code data-language="sh"><span class="line" data-line-number="1"><span style="color:#E1E4E8">file</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"fixture"</span></span>
 <span class="line" data-line-number="2"><span style="color:#E1E4E8">extensions</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"css"</span><span style="color:#9ECBFF"> "js"</span><span style="color:#9ECBFF"> "sh"</span><span style="color:#9ECBFF"> "sh"</span><span style="color:#E1E4E8">)</span></span>
-<span class="line" data-line-number="3"></span>
+<span class="line" data-line-number="3"> </span>
 <span class="line" data-line-number="4"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> ext </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> $&#123;extensions[</span><span style="color:#F97583">*</span><span style="color:#E1E4E8">]&#125; ; </span><span style="color:#F97583">do</span></span>
 <span class="line" data-line-number="5"><span style="color:#79B8FF">  echo</span><span style="color:#9ECBFF"> "</span><span style="color:#E1E4E8">$file</span><span style="color:#9ECBFF">.$&#123;</span><span style="color:#E1E4E8">ext</span><span style="color:#9ECBFF">&#125;"</span></span>
 <span class="line" data-line-number="6"><span style="color:#F97583">done</span></span>
-<span class="line" data-line-number="7"></span>
-<span class="line" data-line-number="8"></span></code></pre>"
+<span class="line" data-line-number="7"> </span>
+<span class="line" data-line-number="8"> </span></code></pre>"
 `;
 
 exports[`createHighlighter > should render fixture: fixture.ts 1`] = `
@@ -78,12 +78,12 @@ exports[`createHighlighter > should render fixture: fixture.ts 1`] = `
 <span class="line" data-line-number="5"><span style="color:#F97583">    throw</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Error</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#96;Can not greet 'undefined'!&#96;</span><span style="color:#E1E4E8">);</span></span>
 <span class="line" data-line-number="6"><span style="color:#E1E4E8">  &#125;</span></span>
 <span class="line" data-line-number="7"><span style="color:#E1E4E8">&#125;</span></span>
-<span class="line" data-line-number="8"></span>
+<span class="line" data-line-number="8"> </span>
 <span class="line" data-line-number="9"><span style="color:#B392F0">hello</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"world!"</span><span style="color:#E1E4E8">);</span></span>
-<span class="line" data-line-number="10"></span></code></pre>"
+<span class="line" data-line-number="10"> </span></code></pre>"
 `;
 
 exports[`createHighlighter > should render fixture: fixture.txt 1`] = `
 "<pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code data-language="txt"><span class="line" data-line-number="1"><span>Hello World</span></span>
-<span class="line" data-line-number="2"><span></span></span></code></pre>"
+<span class="line" data-line-number="2"> </span></code></pre>"
 `;

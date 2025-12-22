@@ -140,6 +140,36 @@ describe("highlighter", () => {
     });
   });
 
+  describe("empty lines", () => {
+    it("should preserve empty lines in output", async () => {
+      const code = `line 1\n\nline 3`;
+      const html = await highlighter(code, "text");
+      document.body.innerHTML = html;
+      const lines = document.querySelectorAll("span[data-line-number]");
+      expect(lines.length).toBe(3);
+    });
+
+    it("should have data-line-number on empty lines", async () => {
+      const code = `line 1\n\nline 3`;
+      const html = await highlighter(code, "text");
+      document.body.innerHTML = html;
+      const lines = document.querySelectorAll("span[data-line-number]");
+      expect(lines[0]?.getAttribute("data-line-number")).toBe("1");
+      expect(lines[1]?.getAttribute("data-line-number")).toBe("2");
+      expect(lines[2]?.getAttribute("data-line-number")).toBe("3");
+    });
+
+    it("empty line should contain nbsp to prevent collapse (issue #11)", async () => {
+      const code = `line 1\n\nline 3`;
+      const html = await highlighter(code, "text");
+      document.body.innerHTML = html;
+      const lines = document.querySelectorAll("span[data-line-number]");
+      const emptyLine = lines[1];
+      // Empty lines should contain nbsp for height
+      expect(emptyLine?.textContent).toBe("\u00A0");
+    });
+  });
+
   describe("svelte escaping", () => {
     it("should escape curly braces", async () => {
       const html = await highlighter("const obj = { a: 1 };", "js");

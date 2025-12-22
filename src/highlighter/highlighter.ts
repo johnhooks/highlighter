@@ -130,6 +130,17 @@ export async function createHighlighter(options: HighlighterOptions): Promise<Md
           if (lineNumbers?.includes(lineNum)) {
             node.properties["data-highlighted"] = "";
           }
+          // Insert nbsp to prevent visual collapse
+          const isEmpty =
+            node.children.length === 0 ||
+            (node.children.length === 1 &&
+              node.children[0].type === "element" &&
+              node.children[0].children.length === 1 &&
+              node.children[0].children[0].type === "text" &&
+              node.children[0].children[0].value === "");
+          if (isEmpty) {
+            node.children = [{ type: "text", value: "\u00A0" }];
+          }
         },
         // Escape Svelte special characters after HTML serialization
         postprocess(html) {
