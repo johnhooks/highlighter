@@ -22,54 +22,54 @@ describe("lexer", () => {
   });
 
   describe("snapshots", () => {
-    it("should lex a single identifier", () => {
+    it("should lex single identifier", async () => {
       const tokens = lexer(`javascript`);
-      expect(tokens).toMatchSnapshot();
+      await expect(tokens).toMatchJsonSnapshot();
     });
 
-    it("should lex a single quote pair", () => {
+    it("should lex single quote pair", async () => {
       const tokens = lexer("'single'");
-      expect(tokens).toMatchSnapshot();
+      await expect(tokens).toMatchJsonSnapshot();
     });
 
-    it("should lex a double quote pair", () => {
+    it("should lex double quote pair", async () => {
       const tokens = lexer('"double"');
-      expect(tokens).toMatchSnapshot();
+      await expect(tokens).toMatchJsonSnapshot();
     });
 
-    it("should lex a dash pair", () => {
+    it("should lex dash pair", async () => {
       const tokens = lexer("/word/");
-      expect(tokens).toMatchSnapshot();
+      await expect(tokens).toMatchJsonSnapshot();
     });
 
-    it("should lex a paren pair", () => {
+    it("should lex paren pair", async () => {
       const tokens = lexer("(argument)");
-      expect(tokens).toMatchSnapshot();
+      await expect(tokens).toMatchJsonSnapshot();
     });
 
-    it("should lex a brace pair", () => {
+    it("should lex brace pair", async () => {
       const tokens = lexer("{range}");
-      expect(tokens).toMatchSnapshot();
+      await expect(tokens).toMatchJsonSnapshot();
     });
 
-    it("should lex a title", () => {
+    it("should lex title", async () => {
       const tokens = lexer('title="hello lexer"');
-      expect(tokens).toMatchSnapshot();
+      await expect(tokens).toMatchJsonSnapshot();
     });
 
-    it("should lex a range", () => {
+    it("should lex range", async () => {
       const tokens = lexer("{3..5,7}");
-      expect(tokens).toMatchSnapshot();
+      await expect(tokens).toMatchJsonSnapshot();
     });
 
-    it("should lex a `showLineNumbers `identifier", () => {
+    it("should lex showLineNumbers identifier", async () => {
       const tokens = lexer("showLineNumbers");
-      expect(tokens).toMatchSnapshot();
+      await expect(tokens).toMatchJsonSnapshot();
     });
 
-    it("should lex a starting line number", () => {
+    it("should lex starting line number", async () => {
       const tokens = lexer("showLineNumbers{5}");
-      expect(tokens).toMatchSnapshot();
+      await expect(tokens).toMatchJsonSnapshot();
     });
   });
 });

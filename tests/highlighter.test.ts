@@ -159,14 +159,14 @@ describe("highlighter", () => {
       expect(lines[2]?.getAttribute("data-line-number")).toBe("3");
     });
 
-    it("empty line should contain nbsp to prevent collapse (issue #11)", async () => {
+    it("empty line should contain newline to preserve height", async () => {
       const code = `line 1\n\nline 3`;
       const html = await highlighter(code, "text");
       document.body.innerHTML = html;
       const lines = document.querySelectorAll("span[data-line-number]");
       const emptyLine = lines[1];
-      // Empty lines should contain nbsp for height
-      expect(emptyLine?.textContent).toBe("\u00A0");
+      // Empty lines should contain newline to preserve height in <pre>
+      expect(emptyLine?.textContent).toBe("\n");
     });
   });
 
@@ -185,9 +185,9 @@ describe("highlighter", () => {
 
     it("should escape angle brackets", async () => {
       const html = await highlighter("<div>hello</div>", "html");
-      // Shiki escapes < and > to &#x3C; and > respectively
-      expect(html).toContain("&#x3C;");
-      expect(html).toContain(">");
+      // Angle brackets in code content are escaped
+      expect(html).toContain("&lt;");
+      expect(html).toContain("&gt;");
     });
   });
 });

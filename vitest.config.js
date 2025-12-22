@@ -4,5 +4,6 @@ export default defineConfig({
   test: {
     include: ["tests/**/*.{test,spec}.{js,mjs,cjs,ts}"],
     globals: true,
+    setupFiles: ["./tests/setup.ts"],
   },
 });
