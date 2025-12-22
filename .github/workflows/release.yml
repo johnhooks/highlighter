@@ -1,32 +1,38 @@
-name: Release if needed
+name: Release
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
 
-env:
-  # Used by scripts/build-types.sh
-  CI: true
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
+    name: Release
     runs-on: ubuntu-latest
-    environment: production
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Build application
-        uses: ./.github/actions/build
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
 
-      - name: Release if needed
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Create Release Pull Request or Publish
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm release
+          version: pnpm version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-        shell: bash
-        run: |
-          git config --global user.email "bitmachina@outlook.com"
-          git config --global user.name "John Hooks"
-          yarn run shipjs trigger
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
