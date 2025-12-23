@@ -57,6 +57,18 @@ src/
 | `src/parse-metadata/lexer.ts` | Tokenizer for fence metadata strings |
 | `src/parse-metadata/parse-metadata.ts` | Metadata parsing logic |
 
+## Reference
+
+Shiki source is available locally at `../shiki` for reference. Relevant transformer implementations:
+
+```
+../shiki/packages/transformers/src/transformers/
+├── transformer-meta-highlight.ts       # {1,3-5} line highlighting
+├── transformer-meta-word-highlight.ts  # /word/ word highlighting
+├── transformer-notation-diff.ts        # [!code ++/--] diff markers
+└── ...
+```
+
 ## Conventions
 
 ### Code Style
