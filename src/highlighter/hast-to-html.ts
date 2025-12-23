@@ -24,9 +24,9 @@ function renderAttributes(properties: Record<string, unknown>): string {
     if (value === true) {
       result.push(name);
     } else if (Array.isArray(value)) {
-      result.push(`${name}="${value.join(" ")}"`);
+      result.push(`${name}="${escapeHtml(value.join(" "))}"`);
     } else {
-      result.push(`${name}="${value}"`);
+      result.push(`${name}="${escapeHtml(String(value))}"`);
     }
   }
 

@@ -1,5 +1,4 @@
-import rangeParser from "parse-numeric-range";
-
+import { parseRange } from "./parse-range.js";
 import { TMetadata } from "./types.js";
 
 /**
@@ -19,7 +18,7 @@ export function parseMetadata(metastring: string | undefined | null): TMetadata 
   const titleString = titleMatch?.[0] ?? "";
   const metaWithoutTitle = metastring.replace(titleString, "");
 
-  const lineNumbers = rangeParser(metaWithoutTitle.match(/{(.*)}/)?.[1] ?? "");
+  const lineNumbers = parseRange(metaWithoutTitle.match(/{(.*)}/)?.[1] ?? "");
 
   const showLineNumbers = /srebmuNeniLwohs(?!(.*)(\/))/.test(reverseString(metastring));
 
