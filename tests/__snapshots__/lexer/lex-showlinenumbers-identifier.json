@@ -1,6 +1,6 @@
 [
   {
-    "type": "identifier",
+    "type": "keyword",
     "value": "showLineNumbers",
     "start": 0,
     "end": 15

@@ -1,3 +1,6 @@
+import { TokenType } from "./constants.js";
+import { isKeyword } from "./utils.js";
+
 type PairStart = "{" | "(" | '"' | "'" | "/";
 type PairEnd = "}" | ")" | '"' | "'" | "/";
 
@@ -5,7 +8,7 @@ export type Token = {
   value: string;
   start: number;
   end: number;
-  type: "identifier" | "literal" | "symbol";
+  type: TokenType;
 };
 
 type State = "identifier" | "literal" | null;
@@ -31,7 +34,9 @@ export function lexer(input: string): readonly Token[] {
       if (isIdentifier(char)) {
         accumulator.push(char);
       } else {
-        tokens.push({ type: "identifier", value: accumulator.join(""), start, end: pos });
+        const value = accumulator.join("");
+        const type: TokenType = isKeyword(value) ? "keyword" : "identifier";
+        tokens.push({ type, value, start, end: pos });
         accumulator = [];
         state = null;
       }
