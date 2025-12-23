@@ -1,3 +1,5 @@
+import type { TokenType } from "./constants.js";
+
 /**
  * Markdown Code Block Metadata
  *
@@ -37,5 +39,5 @@ export type TMetaToken = {
   value: string;
   start: number;
   end: number;
-  type: "identifier" | "literal" | "symbol";
+  type: TokenType;
 };

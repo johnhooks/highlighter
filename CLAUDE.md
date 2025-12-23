@@ -71,7 +71,7 @@ src/
 
 ### Testing
 - Vitest for all tests
-- Snapshot tests for HTML output
+- Snapshot tests for HTML and JSON output
 - Test both modules independently
 
 ## Development
@@ -82,6 +82,16 @@ pnpm build      # tsup
 pnpm test       # vitest run
 pnpm lint       # eslint
 pnpm check      # tsc --noEmit
+```
+
+### Updating Snapshots
+
+```bash
+# Update all snapshots
+pnpm vitest run -u
+
+# Update snapshots for a specific test file
+pnpm vitest run tests/parse-metadata.test.ts -u
 ```
 
 ## Repository

@@ -3,9 +3,9 @@ import { lexer } from "../src/parse-metadata/lexer.js";
 describe("lexer", () => {
   describe("tokens", () => {
     const tokens = lexer('title="testing lexer"');
-    it("should lex an identifier token", () => {
-      const [identifier] = tokens;
-      expect(identifier).toEqual({ value: "title", type: "identifier", start: 0, end: 5 });
+    it("should lex a keyword token", () => {
+      const [keyword] = tokens;
+      expect(keyword).toEqual({ value: "title", type: "keyword", start: 0, end: 5 });
     });
 
     it("should lex symbol tokens", () => {
