@@ -1,0 +1,16 @@
+line with content
+
+line after empty
+
+   line with leading spaces
+line with trailing spaces   
+line with trailing tab	
+
+	line with leading tab
+mixed    	  whitespace
+
+multiple
+
+empty
+
+lines

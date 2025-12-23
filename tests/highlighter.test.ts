@@ -140,6 +140,36 @@ describe("highlighter", () => {
     });
   });
 
+  describe("empty lines", () => {
+    it("should preserve empty lines in output", async () => {
+      const code = `line 1\n\nline 3`;
+      const html = await highlighter(code, "text");
+      document.body.innerHTML = html;
+      const lines = document.querySelectorAll("span[data-line-number]");
+      expect(lines.length).toBe(3);
+    });
+
+    it("should have data-line-number on empty lines", async () => {
+      const code = `line 1\n\nline 3`;
+      const html = await highlighter(code, "text");
+      document.body.innerHTML = html;
+      const lines = document.querySelectorAll("span[data-line-number]");
+      expect(lines[0]?.getAttribute("data-line-number")).toBe("1");
+      expect(lines[1]?.getAttribute("data-line-number")).toBe("2");
+      expect(lines[2]?.getAttribute("data-line-number")).toBe("3");
+    });
+
+    it("empty line should contain newline to preserve height", async () => {
+      const code = `line 1\n\nline 3`;
+      const html = await highlighter(code, "text");
+      document.body.innerHTML = html;
+      const lines = document.querySelectorAll("span[data-line-number]");
+      const emptyLine = lines[1];
+      // Empty lines should contain newline to preserve height in <pre>
+      expect(emptyLine?.textContent).toBe("\n");
+    });
+  });
+
   describe("svelte escaping", () => {
     it("should escape curly braces", async () => {
       const html = await highlighter("const obj = { a: 1 };", "js");
@@ -155,9 +185,9 @@ describe("highlighter", () => {
 
     it("should escape angle brackets", async () => {
       const html = await highlighter("<div>hello</div>", "html");
-      // Shiki escapes < and > to &#x3C; and > respectively
-      expect(html).toContain("&#x3C;");
-      expect(html).toContain(">");
+      // Angle brackets in code content are escaped
+      expect(html).toContain("&lt;");
+      expect(html).toContain("&gt;");
     });
   });
 });

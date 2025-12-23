@@ -1,0 +1,32 @@
+[
+  {
+    "type": "identifier",
+    "value": "title",
+    "start": 0,
+    "end": 5
+  },
+  {
+    "type": "symbol",
+    "value": "=",
+    "start": 5,
+    "end": 6
+  },
+  {
+    "type": "symbol",
+    "value": "\"",
+    "start": 6,
+    "end": 7
+  },
+  {
+    "type": "literal",
+    "value": "hello lexer",
+    "start": 7,
+    "end": 18
+  },
+  {
+    "type": "symbol",
+    "value": "\"",
+    "start": 18,
+    "end": 19
+  }
+]

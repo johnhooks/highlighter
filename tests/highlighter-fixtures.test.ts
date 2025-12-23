@@ -27,9 +27,9 @@ describe("createHighlighter", () => {
     const ext = extname(fixture);
     const lang = ext.length > 1 ? ext.slice(1) : "txt";
 
-    it("should render fixture: " + fixtureName, async () => {
+    it("should render " + fixtureName, async () => {
       const html = await runHighlighterFixture(fixture, lang, highlighter);
-      expect(html).toMatchSnapshot();
+      await expect(html).toMatchHtmlSnapshot();
     });
   });
 });

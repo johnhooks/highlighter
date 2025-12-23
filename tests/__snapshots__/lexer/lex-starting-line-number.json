@@ -1,0 +1,26 @@
+[
+  {
+    "type": "identifier",
+    "value": "showLineNumbers",
+    "start": 0,
+    "end": 15
+  },
+  {
+    "type": "symbol",
+    "value": "{",
+    "start": 15,
+    "end": 16
+  },
+  {
+    "type": "literal",
+    "value": "5",
+    "start": 16,
+    "end": 17
+  },
+  {
+    "type": "symbol",
+    "value": "}",
+    "start": 17,
+    "end": 18
+  }
+]

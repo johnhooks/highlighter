@@ -9,6 +9,8 @@ import {
 
 import { parseMetadata } from "../parse-metadata/index.js";
 
+import { hastToHtml } from "./hast-to-html.js";
+
 type ThemeInput = BundledTheme | ThemeRegistration | ThemeRegistrationRaw;
 
 /**
@@ -130,18 +132,25 @@ export async function createHighlighter(options: HighlighterOptions): Promise<Md
           if (lineNumbers?.includes(lineNum)) {
             node.properties["data-highlighted"] = "";
           }
-        },
-        // Escape Svelte special characters after HTML serialization
-        postprocess(html) {
-          return html.replace(/\{/g, "&#123;").replace(/\}/g, "&#125;").replace(/`/g, "&#96;");
+          // Insert newline for empty lines to preserve height in <pre>
+          const isEmpty =
+            node.children.length === 0 ||
+            (node.children.length === 1 &&
+              node.children[0].type === "element" &&
+              node.children[0].children.length === 1 &&
+              node.children[0].children[0].type === "text" &&
+              node.children[0].children[0].value === "");
+          if (isEmpty) {
+            node.children = [{ type: "text", value: "\n" }];
+          }
         },
       },
     ];
 
-    // Generate HTML with appropriate theme config
+    // Generate HAST and render to HTML with proper Svelte escaping
     // TODO: Replace `as` assertions with proper type guards
     if (isDualTheme) {
-      return shikiHighlighter.codeToHtml(code, {
+      const hast = shikiHighlighter.codeToHast(code, {
         lang: language,
         themes: {
           light: options.themes.light as BundledTheme,
@@ -149,12 +158,14 @@ export async function createHighlighter(options: HighlighterOptions): Promise<Md
         },
         transformers,
       });
+      return hastToHtml(hast);
     } else {
-      return shikiHighlighter.codeToHtml(code, {
+      const hast = shikiHighlighter.codeToHast(code, {
         lang: language,
         theme: options.theme as BundledTheme,
         transformers,
       });
+      return hastToHtml(hast);
     }
   };
 }
